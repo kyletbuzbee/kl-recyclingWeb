@@ -193,7 +193,7 @@ const TrustBuilder: FC = (): JSX.Element => {
           </div>
         </motion.div>
 
-        {/* Community Donations Section */}
+        {/* Trust Indicators Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={controls}
@@ -204,18 +204,51 @@ const TrustBuilder: FC = (): JSX.Element => {
               transition: { duration: 0.8, delay: 0.6 },
             },
           }}
-          className="bg-white/90 backdrop-blur-sm rounded-3xl p-8 border border-blue-200 shadow-lg max-w-4xl mx-auto"
+          className="max-w-6xl mx-auto mt-16"
         >
-          <div className="text-center mb-6">
-            <h3 className="text-2xl font-bold text-gray-900 mb-2">Community Giving Back</h3>
-            <p className="text-gray-600">Your scrap metal donation helps support these local organizations:</p>
+          <div className="text-center mb-12">
+            <h3 className="text-3xl md:text-4xl font-black text-gray-900 mb-4">Trusted by Industry Leaders</h3>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">Why thousands of businesses choose K&L Recycling</p>
           </div>
 
-          <div className="flex flex-wrap justify-center gap-3">
-            {communityDonations.map((org, index) => (
-              <motion.span
-                key={org}
-                initial={{ opacity: 0, scale: 0.8 }}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {[
+              {
+                value: 500,
+                label: "Partners",
+                description: "Trusted Businesses",
+                icon: "🏢",
+                suffix: "+",
+                color: "blue",
+              },
+              {
+                value: 100,
+                label: "Compliant",
+                description: "EPA Standards",
+                icon: "✅",
+                suffix: "%",
+                color: "green",
+              },
+              {
+                value: 4.9,
+                label: "Rating",
+                description: "Customer Satisfaction",
+                icon: "⭐",
+                suffix: "/5",
+                color: "yellow",
+              },
+              {
+                value: "24/7",
+                label: "Service",
+                description: "Emergency Pickup",
+                icon: "🚚",
+                suffix: "",
+                color: "purple",
+              },
+            ].map((metric, index) => (
+              <motion.div
+                key={metric.label}
+                initial={{ opacity: 0, scale: 0.9 }}
                 animate={controls}
                 variants={{
                   visible: {
@@ -224,26 +257,22 @@ const TrustBuilder: FC = (): JSX.Element => {
                     transition: { duration: 0.6, delay: 0.8 + index * 0.1 },
                   },
                 }}
-                className="bg-gradient-to-r from-blue-100 to-purple-100 text-blue-700 px-4 py-2 rounded-full font-medium text-sm border border-blue-200 hover:bg-blue-200 transition-colors duration-300"
+                className="bg-white rounded-2xl p-6 shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300 text-center"
               >
-                {org}
-              </motion.span>
+                <div className="text-4xl mb-3">{metric.icon}</div>
+                <div className={`text-3xl font-black mb-1 ${
+                  metric.color === "blue" ? "text-blue-600" :
+                  metric.color === "green" ? "text-green-600" :
+                  metric.color === "yellow" ? "text-yellow-500" :
+                  "text-purple-600"
+                }`}>
+                  {metric.value}{metric.suffix}
+                </div>
+                <div className="text-lg font-bold text-gray-900 mb-1">{metric.label}</div>
+                <div className="text-sm text-gray-600">{metric.description}</div>
+              </motion.div>
             ))}
           </div>
-
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={controls}
-            variants={{
-              visible: {
-                opacity: 1,
-                transition: { duration: 0.8, delay: 1.2 },
-              },
-            }}
-            className="text-center mt-6"
-          >
-            <p className="text-sm text-gray-500 italic">"We believe in giving back to the communities that have supported us for over 50 years."</p>
-          </motion.div>
         </motion.div>
       </div>
     </section>
