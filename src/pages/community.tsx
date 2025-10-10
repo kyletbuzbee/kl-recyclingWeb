@@ -185,8 +185,20 @@ const Community: FC = () => {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            {volunteerOpportunities.map((opportunity, index) => (
-              <motion.div key={index} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: index * 0.1 }} className="bg-gradient-to-br from-green-50 to-blue-50 p-6 rounded-xl border border-gray-100">
+            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0 * 0.1 }} className="bg-gradient-to-br from-green-50 to-blue-50 p-6 rounded-xl border border-gray-100">
+              <div className="relative mb-4">
+                <div className="aspect-video rounded-lg overflow-hidden mb-4">
+                  <Image src="/assets/community_grace_community_school.jpg" alt="Grace Community School education partnership" fill className="object-cover" />
+                </div>
+              </div>
+              <div className="text-center mb-6">
+                <div className="text-4xl mb-4">🎓</div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Education Partnerships</h3>
+                <p className="text-gray-600 text-sm">Supporting local schools and education initiatives through donations and volunteer programs.</p>
+              </div>
+            </motion.div>
+            {volunteerOpportunities.slice(0, 2).map((opportunity, index) => (
+              <motion.div key={index + 1} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: (index + 1) * 0.1 }} className="bg-gradient-to-br from-green-50 to-blue-50 p-6 rounded-xl border border-gray-100">
                 <div className="text-center mb-6">
                   <div className="text-4xl mb-4">🤝</div>
                   <h3 className="text-xl font-bold text-gray-900 mb-2">{opportunity.title}</h3>
@@ -235,6 +247,9 @@ const Community: FC = () => {
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-black mb-6">"Family First" Community Program</h2>
             <p className="text-xl mb-8 max-w-3xl mx-auto">Every month, K&L donates a portion of recycling proceeds to support local families and community needs.</p>
+            <div className="mb-8">
+              <Image src="/assets/community_donations_charity.jpg" alt="Community donations and charity support" width={600} height={300} className="rounded-2xl mx-auto shadow-2xl" />
+            </div>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">

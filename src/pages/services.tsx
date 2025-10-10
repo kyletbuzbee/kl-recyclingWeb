@@ -73,6 +73,21 @@ const ServicesPage: FC = () => {
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">{category.title}</h3>
                 <p className="text-gray-600 text-center mb-6">{category.description}</p>
+                {index === 0 && (
+                  <div className="mb-6">
+                    <Image src="/assets/car_crushing_kl_services.jpg" alt="Industrial Services" width={400} height={200} className="rounded-lg object-cover w-full" />
+                  </div>
+                )}
+                {index === 1 && (
+                  <div className="mb-6">
+                    <Image src="/assets/demolition_cleanup.jpg" alt="Demolition Services" width={400} height={200} className="rounded-lg object-cover w-full" />
+                  </div>
+                )}
+                {index === 2 && (
+                  <div className="mb-6">
+                    <Image src="/assets/equipment/in-action.png" alt="Public Services" width={400} height={200} className="rounded-lg object-cover w-full" />
+                  </div>
+                )}
                 <div className="space-y-2">
                   {category.services.map((serviceId) => {
                     const service = SERVICES_DATA[serviceId];
@@ -180,70 +195,6 @@ const ServicesPage: FC = () => {
               </div>
               <h3 className="font-bold text-gray-900 mb-2">Smart Scheduling</h3>
               <p className="text-gray-600 text-sm">Use scheduling tools that adapt to your timeline and needs</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing Information */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6">Competitive Pricing</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">We offer competitive market-based pricing with transparent, no-hidden-fee service</p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
-            {[
-              {
-                material: "Copper",
-                price: "$3.50-$4.50",
-                unit: "per lb",
-                color: "from-orange-500 to-red-500",
-              },
-              {
-                material: "Aluminum",
-                price: "$0.60-$1.20",
-                unit: "per lb",
-                color: "from-gray-400 to-gray-600",
-              },
-              {
-                material: "Steel",
-                price: "$0.08-$0.15",
-                unit: "per lb",
-                color: "from-gray-600 to-gray-800",
-              },
-              {
-                material: "Brass",
-                price: "$2.00-$3.00",
-                unit: "per lb",
-                color: "from-yellow-500 to-yellow-600",
-              },
-            ].map((item, index) => (
-              <div key={index} className="content-card p-6 text-center" data-aos="fade-up" data-aos-delay={index * 100}>
-                <div className={`w-16 h-16 bg-gradient-to-r ${item.color} rounded-xl flex items-center justify-center mx-auto mb-4`}>
-                  <span className="text-white font-bold text-lg">{item.material.charAt(0)}</span>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">{item.material}</h3>
-                <div className="text-2xl font-black text-royal-blue-600 mb-1">{item.price}</div>
-                <div className="text-sm text-gray-500">{item.unit}</div>
-                <div className="text-xs text-gray-400 mt-2">*Prices subject to market fluctuations</div>
-              </div>
-            ))}
-          </div>
-
-          <div className="text-center mt-12">
-            <div className="bg-gradient-to-r from-royal-blue-50 to-electric-blue-50 rounded-2xl p-8 max-w-4xl mx-auto">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Need Current Pricing?</h3>
-              <p className="text-gray-600 mb-6">Metal prices fluctuate daily. Contact us for real-time pricing on your specific materials.</p>
-              <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
-                <Link href="/contact#quote-tool" className="bg-gradient-to-r from-royal-blue-600 to-electric-blue-600 text-white font-bold py-3 px-8 rounded-xl hover:shadow-lg transition-all duration-300">
-                  Get Quote
-                </Link>
-                <a href="tel:+17135550123" className="border-2 border-royal-blue-600 text-royal-blue-600 font-bold py-3 px-8 rounded-xl hover:bg-royal-blue-50 transition-all duration-300">
-                  Call (713) 555-0123
-                </a>
-              </div>
             </div>
           </div>
         </div>

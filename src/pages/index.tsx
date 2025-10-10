@@ -15,7 +15,6 @@ import TrustBuilder from "@/components/TrustBuilder";
 const Hero = dynamic(() => import("@/components/Hero"));
 const TrustBadges = dynamic(() => import("@/components/TrustBadges").then((mod) => mod.TrustBadges));
 const Testimonials = dynamic(() => import("@/components/Testimonials"));
-const SchedulePickupWidget = dynamic(() => import("@/components/SchedulePickupWidget"));
 
 const HomePage: FC = (): JSX.Element => {
   return (
@@ -65,13 +64,11 @@ const HomePage: FC = (): JSX.Element => {
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">Since 1956, we've grown from humble beginnings as a single truck operation to East Texas' most trusted scrap metal recycler. Because every customer matters, we deliver personalized service you can count on.</p>
           </div>
 
-          {/* Schedule Pickup Widget - Full Width */}
-          <div className="w-full">
-            <SchedulePickupWidget />
-          </div>
-
           {/* Community Values */}
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mt-16 bg-white/90 backdrop-blur-sm rounded-3xl p-8 border border-blue-200">
+            <div className="mb-8">
+              <Image src="/assets/layout_core_values.jpg" alt="Core Values - Family-owned, fair pricing, community commitment" width={800} height={400} className="rounded-2xl w-full object-cover" />
+            </div>
             <h3 className="text-2xl font-bold text-center text-gray-900 mb-8">Our Community Commitment</h3>
             <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
               <div className="text-center">
@@ -136,6 +133,11 @@ const HomePage: FC = (): JSX.Element => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 max-w-7xl mx-auto">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.1 }} className="bg-gradient-to-br from-green-50 to-emerald-50 p-6 md:p-8 rounded-2xl shadow-lg border border-green-200 hover:shadow-xl transition-all duration-300 group">
+              <div className="relative">
+                <div className="absolute -top-4 -right-4 w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden border-4 border-white shadow-lg group-hover:scale-105 transition-transform duration-300">
+                  <Image src="/assets/car_crushing_kl_services.jpg" alt="Auto crushing and metal processing services" fill className="object-cover" />
+                </div>
+              </div>
               <div className="flex items-center mb-4 md:mb-6">
                 <div className="w-12 h-12 md:w-16 md:h-16 bg-green-600 rounded-xl flex items-center justify-center mr-3 md:mr-4 flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
                   <svg className="w-5 h-5 md:w-8 md:h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -182,6 +184,11 @@ const HomePage: FC = (): JSX.Element => {
             </motion.div>
 
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.2 }} className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 md:p-8 rounded-2xl shadow-lg border border-blue-200 hover:shadow-xl transition-all duration-300 group">
+              <div className="relative">
+                <div className="absolute -top-4 -right-4 w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden border-4 border-white shadow-lg group-hover:scale-105 transition-transform duration-300">
+                  <Image src="/assets/roll_off_kl.jpg" alt="Roll-off container and construction site services" fill className="object-cover" />
+                </div>
+              </div>
               <div className="flex items-center mb-4 md:mb-6">
                 <div className="w-12 h-12 md:w-16 md:h-16 bg-blue-600 rounded-xl flex items-center justify-center mr-3 md:mr-4 flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
                   <svg className="w-5 h-5 md:w-8 md:h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -228,6 +235,11 @@ const HomePage: FC = (): JSX.Element => {
             </motion.div>
 
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.3 }} className="bg-gradient-to-br from-purple-50 to-indigo-50 p-6 md:p-8 rounded-2xl shadow-lg border border-purple-200 hover:shadow-xl transition-all duration-300 group">
+              <div className="relative">
+                <div className="absolute -top-4 -right-4 w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden border-4 border-white shadow-lg group-hover:scale-105 transition-transform duration-300">
+                  <Image src="/assets/construction_remodel_kl.jpg" alt="Construction and remodeling debris processing" fill className="object-cover" />
+                </div>
+              </div>
               <div className="flex items-center mb-4 md:mb-6">
                 <div className="w-12 h-12 md:w-16 md:h-16 bg-purple-600 rounded-xl flex items-center justify-center mr-3 md:mr-4 flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
                   <svg className="w-5 h-5 md:w-8 md:h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -471,7 +483,7 @@ const HomePage: FC = (): JSX.Element => {
                         }
                       }}
                     >
-                      {service.id === "demolition" ? "Schedule Demolition" : "Book Mobile Service"}
+                      Schedule Services
                     </Link>
                   </div>
                 </div>

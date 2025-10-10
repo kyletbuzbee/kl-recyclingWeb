@@ -141,8 +141,8 @@ module.exports = {
         "grid-gap-2xl": "4rem",
       },
       fontFamily: {
-        sans: ["var(--font-roboto)", "sans-serif"],
-        heading: ["var(--font-roboto)", "system-ui", "sans-serif"],
+        sans: ["var(--font-lato)", "sans-serif"],
+        heading: ["var(--font-lato)", "system-ui", "sans-serif"],
         mono: ["SF Mono", "Monaco", "monospace"],
       },
       fontSize: {

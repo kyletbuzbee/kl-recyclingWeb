@@ -144,6 +144,12 @@ const SustainabilityPage: FC = () => {
                 <h2 className="text-2xl md:text-3xl font-black text-white">Why choose sustainable recycling?</h2>
               </div>
 
+              <div className="mb-8">
+                <div className="aspect-video rounded-xl overflow-hidden">
+                  <Image src="/assets/scrap_goals.jpg" alt="Achieving environmental goals through recycling" fill className="object-cover" />
+                </div>
+              </div>
+
               <div className="grid md:grid-cols-2 gap-8">
                 <div>
                   <h3 className="text-xl font-bold mb-6 text-white">Environmental Benefits:</h3>
@@ -225,30 +231,21 @@ const SustainabilityPage: FC = () => {
             We actively participate in local initiatives to promote recycling and sustainability.
           </p>
           <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                title: "Recycling Drives",
-                description: "Hosting annual events for community metal collection.",
-                image: "/images/Construction.jpg",
-                altText: "K&L Recycling community recycling drive event",
-              }, // Community event [image:7]
-              {
-                title: "Educational Workshops",
-                description: "Partnering with schools to teach recycling benefits.",
-                image: "https://via.placeholder.com/400x300.png?text=Educational+Workshops",
-              }, // Event [image:8]
-              {
-                title: "Local Partnerships",
-                description: "Collaborating with charities for eco-friendly projects.",
-                image: "https://via.placeholder.com/400x300.png?text=Local+Partnerships",
-              }, // Event [image:9]
-            ].map((item, index) => (
-              <div key={index} className="bg-white p-6 rounded-lg shadow-lg text-center" data-aos="fade-up" data-aos-delay={index * 200}>
-                <Image src={item.image} alt={item.title} width={400} height={300} className="rounded-md mb-4 animate-zoom-in" />
-                <h3 className="text-2xl font-bold text-green-600 mb-2">{item.title}</h3>
-                <p className="text-gray-600">{item.description}</p>
-              </div>
-            ))}
+            <div className="bg-white p-6 rounded-lg shadow-lg text-center" data-aos="fade-up" data-aos-delay={0}>
+              <Image src="/assets/services/Construction.jpg" alt="Construction site recycling and sustainability" width={400} height={300} className="rounded-md mb-4 animate-zoom-in" />
+              <h3 className="text-2xl font-bold text-green-600 mb-2">Recycling Drives</h3>
+              <p className="text-gray-600">Hosting annual events for community metal collection.</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-lg text-center" data-aos="fade-up" data-aos-delay={200}>
+              <Image src="/assets/did_you_know_steel.jpg" alt="Educational content about steel and recycling benefits" width={400} height={300} className="rounded-md mb-4 animate-zoom-in" />
+              <h3 className="text-2xl font-bold text-green-600 mb-2">Educational Workshops</h3>
+              <p className="text-gray-600">Partnering with schools to teach recycling benefits.</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-lg text-center" data-aos="fade-up" data-aos-delay={400}>
+              <Image src="/assets/community_donations_charity.jpg" alt="Community partnerships and charity collaborations" width={400} height={300} className="rounded-md mb-4 animate-zoom-in" />
+              <h3 className="text-2xl font-bold text-green-600 mb-2">Local Partnerships</h3>
+              <p className="text-gray-600">Collaborating with charities for eco-friendly projects.</p>
+            </div>
           </div>
         </div>
       </section>

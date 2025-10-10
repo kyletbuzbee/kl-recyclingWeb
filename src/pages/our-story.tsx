@@ -32,7 +32,7 @@ const OurStory: FC = () => {
       year: "2010s",
       title: "Sustainability Leadership",
       description: "Embracing advanced recycling technologies and environmental certifications, K&L becomes a regional leader in sustainable scrap metal processing.",
-      image: "/assets/layout/hero-background.jpg",
+      image: "/assets/blog_seperating_metals.jpg",
       quote: "Every piece of metal we recycle is a step toward a cleaner tomorrow.",
     },
     {

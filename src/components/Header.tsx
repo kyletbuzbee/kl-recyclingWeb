@@ -74,7 +74,7 @@ const Header: FC = () => {
               <span>(903) 592-6299</span>
             </a>
             <Link href="/schedule-pickup" className="bg-royal-blue-600 text-white px-6 py-2.5 rounded-lg font-semibold hover:bg-royal-blue-700 transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
-              Schedule Pickup
+              Schedule Services
             </Link>
           </div>
 
@@ -109,7 +109,7 @@ const Header: FC = () => {
                   </li>
                   <li className="px-4 pb-2">
                     <Link href="/schedule-pickup" onClick={() => setIsMobileMenuOpen(false)} className="block bg-royal-blue-600 text-white text-center py-3 px-4 rounded-lg font-semibold hover:bg-royal-blue-700 transition-colors">
-                      Schedule Pickup
+                      Schedule Services
                     </Link>
                   </li>
                 </ul>

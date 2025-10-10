@@ -17,9 +17,9 @@ const TrustBuilder: FC = (): JSX.Element => {
   const elementRef = useRef<HTMLDivElement>(null);
 
   const trustworthinessData = {
-    years: 54,
+    years: 56,
     since: "Serving Texas since",
-    year: "1970",
+    year: "1969",
     certified: "CERTIFIED SCALES",
     locations: 9,
     locationsText: "Locations across East Texas & Kansas",
@@ -111,10 +111,10 @@ const TrustBuilder: FC = (): JSX.Element => {
             transition: { duration: 0.6, delay: 0.2 + index * 0.1 },
           },
         }}
-        className={`bg-gradient-to-br from-${metric.color}-50 to-${metric.color === "green" ? "emerald" : metric.color === "blue" ? "cyan" : "pink"}-50 p-6 rounded-2xl border border-${metric.color}-200 hover:shadow-xl transition-all duration-300`}
+        className={`${metric.color === "green" ? "bg-gradient-to-br from-green-50 to-emerald-50 border border-green-200" : metric.color === "blue" ? "bg-gradient-to-br from-blue-50 to-cyan-50 border border-blue-200" : "bg-gradient-to-br from-purple-50 to-pink-50 border border-purple-200"} p-6 rounded-2xl hover:shadow-xl transition-all duration-300`}
       >
         <div className="text-3xl mb-2">{metric.icon}</div>
-        <div className={`text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-${metric.color}-600 to-${metric.color === "green" ? "emerald" : metric.color === "blue" ? "cyan" : "pink"}-600 mb-1`}>
+        <div className={`${metric.color === "green" ? "text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-emerald-600" : metric.color === "blue" ? "text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-600" : "text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600"} text-4xl font-black mb-1`}>
           {metric.prefix}
           {hasCounted ? count : "0"}
           {metric.suffix}

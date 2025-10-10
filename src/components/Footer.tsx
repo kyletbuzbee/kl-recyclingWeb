@@ -39,9 +39,9 @@ const Footer: FC = () => {
           <div>
             <h3 className="text-lg font-semibold">Contact</h3>
             <p className="mt-2 text-gray-400">
-              123 Industrial Park Rd
+              4134 Chandler Hwy
               <br />
-              Tyler, TX 75701
+              Tyler, Texas 75702
             </p>
             <p className="mt-2 text-gray-400">(903) 592-6299</p>
           </div>

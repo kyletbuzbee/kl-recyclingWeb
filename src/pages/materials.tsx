@@ -91,7 +91,7 @@ const MaterialsPage: FC = () => {
         <meta name="description" content="We buy a wide range of ferrous and non-ferrous metals at competitive prices. Check what we accept and prohibit." />
       </Head>
 
-      <section className="bg-gray-800 text-white py-20">
+      <section className="bg-blue-600 text-white py-20">
         <div className="container mx-auto px-6 text-center" data-aos="fade-down">
           <h1 className="text-4xl md:text-6xl font-black">Materials We Buy</h1>
           <p className="text-xl md:text-2xl mt-4 max-w-3xl mx-auto">Competitive pricing for all ferrous and non-ferrous metals. Market-based rates; contact for current quotes.</p>

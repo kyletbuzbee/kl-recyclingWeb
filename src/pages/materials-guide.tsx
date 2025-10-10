@@ -9,6 +9,7 @@ const MaterialsGuide: FC = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [environmentalWeight, setEnvironmentalWeight] = useState<number>(0);
+  const [selectedMaterial, setSelectedMaterial] = useState<MaterialItem | null>(null);
 
   const categories = [
     { id: "all", name: "All Materials", icon: "📋" },
@@ -49,8 +50,11 @@ const MaterialsGuide: FC = () => {
   }, [environmentalWeight]);
 
   const handleMaterialSelect = (material: MaterialItem) => {
-    // In a real implementation, this might trigger a quote or contact flow
-    console.log("Selected material:", material.name);
+    setSelectedMaterial(material);
+  };
+
+  const closeModal = () => {
+    setSelectedMaterial(null);
   };
 
   return (
@@ -58,7 +62,7 @@ const MaterialsGuide: FC = () => {
       <SEO title="Materials We Buy | K&L Recycling Pricing Guide" description="Search our comprehensive materials guide. See real-time pricing, accepted materials, and calculate your recycling environmental impact. East Texas." keywords="scrap metal prices, recycling materials, steel prices, copper prices, aluminum prices, environmental impact calculator" />
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-green-600 via-emerald-600 to-teal-600 text-white py-20">
+      <section className="bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-600 text-white py-20">
         <div className="container mx-auto px-6 text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
             <div className="flex items-center justify-center mb-6">
@@ -69,7 +73,7 @@ const MaterialsGuide: FC = () => {
               </div>
               <h1 className="text-4xl md:text-6xl font-black">Materials Guide</h1>
             </div>
-            <p className="text-xl md:text-2xl max-w-4xl mx-auto text-green-100">Discover what we buy, current pricing, and the environmental impact of your recycling contribution.</p>
+            <p className="text-xl md:text-2xl max-w-4xl mx-auto text-blue-100">Discover what we buy, current pricing, and the environmental impact of your recycling contribution.</p>
           </motion.div>
         </div>
       </section>
@@ -80,7 +84,7 @@ const MaterialsGuide: FC = () => {
           {/* Search Bar */}
           <div className="max-w-4xl mx-auto mb-8">
             <div className="relative">
-              <input type="text" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} placeholder="Search materials (e.g., 'copper wire', 'aluminum cans', 'steel beams')..." className="w-full px-6 py-4 text-lg border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-green-500 focus:border-transparent pr-12" />
+              <input type="text" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} placeholder="Search materials (e.g., 'copper wire', 'aluminum cans', 'steel beams')..." className="w-full px-6 py-4 text-lg border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent pr-12" />
               <div className="absolute right-4 top-4">
                 <svg className="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
@@ -92,7 +96,7 @@ const MaterialsGuide: FC = () => {
           {/* Category Filters */}
           <div className="flex flex-wrap justify-center gap-4 mb-8">
             {categories.map((category) => (
-              <button key={category.id} onClick={() => setSelectedCategory(category.id)} className={`px-6 py-3 rounded-full font-medium transition-all duration-300 flex items-center space-x-2 ${selectedCategory === category.id ? "bg-green-600 text-white shadow-lg" : "bg-gray-100 text-gray-700 hover:bg-green-100 hover:text-green-700"}`}>
+              <button key={category.id} onClick={() => setSelectedCategory(category.id)} className={`px-6 py-3 rounded-full font-medium transition-all duration-300 flex items-center space-x-2 ${selectedCategory === category.id ? "bg-blue-600 text-white shadow-lg" : "bg-gray-100 text-gray-700 hover:bg-blue-100 hover:text-blue-700"}`}>
                 <span className="text-lg">{category.icon}</span>
                 <span>{category.name}</span>
               </button>
@@ -115,7 +119,7 @@ const MaterialsGuide: FC = () => {
                 <label htmlFor="weight" className="block text-lg font-medium text-gray-700 mb-2">
                   How many pounds of scrap metal do you recycle?
                 </label>
-                <input type="number" id="weight" value={environmentalWeight || ""} onChange={(e) => setEnvironmentalWeight(parseInt(e.target.value) || 0)} placeholder="Enter weight in pounds..." className="w-full px-4 py-3 text-lg border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent" min="0" />
+                <input type="number" id="weight" value={environmentalWeight || ""} onChange={(e) => setEnvironmentalWeight(parseInt(e.target.value) || 0)} placeholder="Enter weight in pounds..." className="w-full px-4 py-3 text-lg border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" min="0" />
               </div>
 
               {environmentalImpact && (
@@ -181,26 +185,25 @@ const MaterialsGuide: FC = () => {
                 <motion.div key={material.id} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: index * 0.1 }} className="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 hover:scale-[1.02] transition-all duration-300 group cursor-pointer" onClick={() => handleMaterialSelect(material)}>
                   <div className="relative h-48 overflow-hidden">
                     <Image src={material.image || "/assets/layout/hero-background.jpg"} alt={material.name} fill className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
-                    <div className="absolute top-4 right-4 bg-green-500 group-hover:bg-royal-blue-700 text-white px-3 py-1 rounded-full text-sm font-bold transition-colors duration-300">{material.price}</div>
                   </div>
 
                   <div className="p-6">
                     <div className="flex items-center justify-between mb-3">
-                      <h3 className="text-lg font-bold text-gray-900">{material.name}</h3>
-                      <span className={`px-2 py-1 rounded-full text-xs font-medium ${material.category === "ferrous" ? "bg-blue-100 text-blue-800" : material.category === "non-ferrous" ? "bg-yellow-100 text-yellow-800" : material.category === "electronic" ? "bg-purple-100 text-purple-800" : "bg-gray-100 text-gray-800"}`}>{material.category}</span>
+                      <h3 className="text-xl font-bold text-gray-900">{material.name}</h3>
+                      <span className={`px-2 py-1 rounded-full text-sm font-medium ${material.category === "ferrous" ? "bg-blue-100 text-blue-800" : material.category === "non-ferrous" ? "bg-yellow-100 text-yellow-800" : material.category === "electronic" ? "bg-purple-100 text-purple-800" : "bg-gray-100 text-gray-800"}`}>{material.category}</span>
                     </div>
 
-                    <p className="text-gray-600 text-sm mb-4 line-clamp-3">{material.description}</p>
+                    <p className="text-gray-600 text-base mb-4 line-clamp-3">{material.description}</p>
 
-                    <div className="text-sm text-royal-blue-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300 mb-4 font-medium">Click to learn more →</div>
+                    <div className="text-base text-royal-blue-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300 mb-4 font-medium">Click to learn more →</div>
 
                     {material.requirements && material.requirements.length > 0 && (
                       <div className="mb-4">
-                        <h4 className="text-sm font-medium text-gray-900 mb-2">Requirements:</h4>
-                        <ul className="text-xs text-gray-600 space-y-1">
+                        <h4 className="text-base font-medium text-gray-900 mb-2">Requirements:</h4>
+                        <ul className="text-sm text-gray-600 space-y-1">
                           {material.requirements.map((req, idx) => (
                             <li key={idx} className="flex items-center">
-                              <svg className="w-3 h-3 text-green-500 mr-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                              <svg className="w-4 h-4 text-green-500 mr-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                                 <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                               </svg>
                               {req}
@@ -212,7 +215,7 @@ const MaterialsGuide: FC = () => {
 
                     <div className="flex flex-wrap gap-1">
                       {material.tags.slice(0, 3).map((tag) => (
-                        <span key={tag} className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded-full">
+                        <span key={tag} className="px-3 py-1 bg-gray-100 text-gray-600 text-sm rounded-full">
                           {tag}
                         </span>
                       ))}
@@ -294,20 +297,101 @@ const MaterialsGuide: FC = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="py-16 bg-gradient-to-r from-green-600 to-emerald-700 text-white">
+      <section className="py-16 bg-gradient-to-r from-blue-600 to-indigo-700 text-white">
         <div className="container mx-auto px-6 text-center">
           <h2 className="text-3xl md:text-4xl font-black mb-6">Ready to Get Paid Cash?</h2>
           <p className="text-xl mb-8 max-w-3xl mx-auto">Drop off your materials at any of our 7 locations across East Texas & Kansas, or request a container rental for on-site collection.</p>
           <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
-            <a href="/locations" className="px-8 py-4 bg-white text-green-700 font-bold rounded-lg hover:bg-gray-100 transition-colors">
+            <a href="/locations" className="px-8 py-4 bg-white text-blue-700 font-bold rounded-lg hover:bg-gray-100 transition-colors">
               Find a Location
             </a>
-            <a href="/schedule-pickup" className="px-8 py-4 border-2 border-white text-white font-bold rounded-lg hover:bg-white hover:text-green-700 transition-colors">
+            <a href="/schedule-pickup" className="px-8 py-4 border-2 border-white text-white font-bold rounded-lg hover:bg-white hover:text-blue-700 transition-colors">
               Schedule Container
             </a>
           </div>
         </div>
       </section>
+
+      {/* Material Detail Modal */}
+      {selectedMaterial && (
+        <>
+          <div className="fixed inset-0 bg-black bg-opacity-50 z-50" onClick={closeModal}></div>
+          <div className="fixed inset-4 md:inset-8 z-50 overflow-y-auto">
+            <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-2xl p-8 relative">
+              <button onClick={closeModal} className="absolute top-4 right-4 w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center hover:bg-gray-300 transition-colors">
+                <svg className="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+
+              <div className="flex flex-col lg:flex-row gap-8">
+                <div className="lg:w-1/2">
+                  <div className="relative h-64 lg:h-96 rounded-lg overflow-hidden">
+                    <Image src={selectedMaterial.image || "/assets/layout/hero-background.jpg"} alt={selectedMaterial.name} fill className="w-full h-full object-cover" />
+                  </div>
+                </div>
+
+                <div className="lg:w-1/2">
+                  <div className="flex items-center justify-between mb-4">
+                    <h2 className="text-3xl font-black text-gray-900">{selectedMaterial.name}</h2>
+                    <span className={`px-3 py-1 rounded-full text-sm font-medium ${selectedMaterial.category === "ferrous" ? "bg-blue-100 text-blue-800" : selectedMaterial.category === "non-ferrous" ? "bg-yellow-100 text-yellow-800" : selectedMaterial.category === "electronic" ? "bg-purple-100 text-purple-800" : "bg-gray-100 text-gray-800"} capitalize`}>{selectedMaterial.category}</span>
+                  </div>
+
+                  <p className="text-gray-600 text-lg mb-6">{selectedMaterial.description}</p>
+
+                  {selectedMaterial.additionalInfo && (
+                    <div className="mb-6">
+                      <h3 className="text-xl font-bold text-gray-900 mb-3">Additional Information</h3>
+                      <p className="text-gray-600">{selectedMaterial.additionalInfo}</p>
+                    </div>
+                  )}
+
+                  {selectedMaterial.requirements && selectedMaterial.requirements.length > 0 && (
+                    <div className="mb-6">
+                      <h3 className="text-xl font-bold text-gray-900 mb-3">Requirements</h3>
+                      <ul className="space-y-2">
+                        {selectedMaterial.requirements.map((req, idx) => (
+                          <li key={idx} className="flex items-start">
+                            <svg className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                              <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                            </svg>
+                            <span className="text-gray-600">{req}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+
+                  {selectedMaterial.notes && (
+                    <div className="mb-6">
+                      <h3 className="text-xl font-bold text-gray-900 mb-3">Notes</h3>
+                      <p className="text-gray-600">{selectedMaterial.notes}</p>
+                    </div>
+                  )}
+
+                  <div className="flex flex-wrap gap-2">
+                    <h3 className="text-lg font-bold text-gray-900 mb-2 w-full">Tags</h3>
+                    {selectedMaterial.tags.map((tag) => (
+                      <span key={tag} className="px-4 py-2 bg-gray-100 text-gray-700 text-sm rounded-full">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+
+                  <div className="mt-8 flex gap-4">
+                    <a href="/locations" className="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors">
+                      Find Location
+                    </a>
+                    <a href="/schedule-pickup" className="px-6 py-3 border-2 border-blue-600 text-blue-600 font-semibold rounded-lg hover:bg-blue-50 transition-colors">
+                      Schedule Pickup
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </>
+      )}
     </Layout>
   );
 };

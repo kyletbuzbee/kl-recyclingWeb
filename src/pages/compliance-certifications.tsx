@@ -181,7 +181,7 @@ const ComplianceCertifications: FC = () => {
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-4 gap-8 text-center">
             <div className="bg-white p-6 rounded-xl shadow-lg">
-              <h3 className="text-3xl font-black text-green-600 mb-2">68+</h3>
+              <h3 className="text-3xl font-black text-green-600 mb-2">56+</h3>
               <p className="text-gray-600">Years of Compliance</p>
             </div>
             <div className="bg-white p-6 rounded-xl shadow-lg">

@@ -31,7 +31,7 @@ const LOCATIONS: Location[] = [
     zip: "75702",
     phone: "(903) 555-0101",
     address: "1234 Industrial Blvd, Tyler, TX 75702",
-    image: "/assets/locations/tyler_yard.png",
+    image: "/assets/locations/madfos_main_yard.png",
     services: ["ferrous", "non-ferrous", "containers", "demolition"],
     coordinates: { lat: 32.3513, lng: -95.3011 },
     hours: {
@@ -159,23 +159,6 @@ const LOCATIONS: Location[] = [
       sunday: "Closed",
     },
   },
-  {
-    id: "madisonville-main",
-    name: "K&L Recycling - Madisonville Main Yard",
-    city: "Madisonville",
-    state: "TX",
-    zip: "77864",
-    phone: "(936) 555-0909",
-    address: "3456 Oak Ridge Rd, Madisonville, TX 77864",
-    image: "/assets/locations/madfos_main_yard.png",
-    services: ["ferrous", "non-ferrous", "containers", "demolition"],
-    coordinates: { lat: 30.9602, lng: -95.9128 },
-    hours: {
-      weekdays: "7:00 AM - 5:00 PM",
-      saturday: "8:00 AM - 12:00 PM",
-      sunday: "Closed",
-    },
-  },
 ];
 
 const LocationFinder: FC = () => {
@@ -223,10 +206,14 @@ const LocationFinder: FC = () => {
       </Head>
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-slate-900 to-royal-blue-900 text-white py-20">
-        <div className="container mx-auto px-6 text-center">
+      <section className="relative bg-gradient-to-br from-slate-900 via-slate-900 to-royal-blue-900 text-white py-20">
+        <div className="absolute inset-0">
+          <Image src="/assets/locations/tyler_headquarters.png" alt="Tyler Headquarters" fill className="object-cover opacity-30" />
+          <div className="absolute inset-0 bg-black/50"></div>
+        </div>
+        <div className="relative container mx-auto px-6 text-center">
           <h1 className="text-4xl md:text-6xl font-black mb-6">Find Your Nearest Location</h1>
-          <p className="text-xl md:text-2xl text-blue-100 max-w-4xl mx-auto mb-8">9 locations across Texas and Kansas. Get turn-by-turn directions and check which services are available at each facility.</p>
+          <p className="text-xl md:text-2xl text-blue-100 max-w-4xl mx-auto mb-8">8 locations across Texas and Kansas. Get turn-by-turn directions and check which services are available at each facility.</p>
           <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4 mb-8">
             <button
               onClick={() => {
@@ -239,6 +226,42 @@ const LocationFinder: FC = () => {
             <a href="tel:+18005338081" className="border-2 border-white text-white hover:bg-white hover:text-royal-blue-600 font-bold py-4 px-8 rounded-xl transition-colors text-lg">
               📞 Call Toll-Free: (800) 533-8081
             </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Corporate Headquarters Section */}
+      <section className="py-16 bg-gradient-to-br from-royal-blue-600 via-electric-blue-600 to-purple-600 text-white">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20">
+              <div className="w-32 h-32 bg-white rounded-full flex items-center justify-center mx-auto mb-6 overflow-hidden">
+                <Image src="/assets/locations/tyler_headquarters.png" alt="Tyler Headquarters" width={128} height={128} className="object-cover" />
+              </div>
+              <h2 className="text-3xl md:text-4xl font-black mb-4">Corporate Headquarters</h2>
+              <div className="text-xl md:text-2xl font-semibold mb-4">
+                4134 Chandler Hwy
+                <br />
+                Tyler, Texas 75702
+              </div>
+              <div className="mb-6 text-lg text-blue-100">
+                <p className="mb-2">
+                  <strong>Hours:</strong>
+                </p>
+                <p className="mb-1">Monday - Friday: 8:00 AM - 5:00 PM</p>
+                <p className="mb-1">Saturday: 7:00 AM - 12:00 PM</p>
+                <p>Sunday: Closed</p>
+              </div>
+              <p className="text-lg text-blue-100 mb-6">Where it all began. Our main facility serving East Texas since 1956.</p>
+              <div className="flex flex-col sm:flex-row justify-center space-y-3 sm:space-y-0 sm:space-x-4">
+                <a href="tel:(903)592-6299" className="bg-white text-royal-blue-600 font-bold py-3 px-8 rounded-xl hover:bg-gray-100 transition-colors">
+                  📞 Call Headquarters
+                </a>
+                <a href="https://www.google.com/maps/dir/?api=1&destination=4134+Chandler+Hwy,+Tyler,+TX+75702" target="_blank" rel="noopener noreferrer" className="border-2 border-white text-white font-bold py-3 px-8 rounded-xl hover:bg-white hover:text-royal-blue-600 transition-colors">
+                  📍 Get Directions
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -333,13 +356,13 @@ const LocationFinder: FC = () => {
                     <h4 className="font-semibold text-gray-900 mb-2">Hours:</h4>
                     <div className="text-sm text-gray-600 space-y-1">
                       <div>
-                        <strong>Mon-Fri:</strong> {location.hours.weekdays}
+                        <strong>Mon-Fri:</strong> 8:00 AM - 5:00 PM
                       </div>
                       <div>
-                        <strong>Saturday:</strong> {location.hours.saturday}
+                        <strong>Saturday:</strong> 7:00 AM - 12:00 PM
                       </div>
                       <div>
-                        <strong>Sunday:</strong> {location.hours.sunday}
+                        <strong>Sunday:</strong> Closed
                       </div>
                     </div>
                   </div>
