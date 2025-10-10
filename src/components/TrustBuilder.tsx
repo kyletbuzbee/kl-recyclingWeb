@@ -165,9 +165,7 @@ const TrustBuilder: FC = (): JSX.Element => {
                 <svg className="w-6 h-6 text-green-600" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
-                <span className="font-bold text-lg">
-                  Family-Owned Since {trustworthinessData.year}
-                </span>
+                <span className="font-bold text-lg">Family-Owned Since {trustworthinessData.year}</span>
               </div>
 
               <div className="hidden md:block w-px h-8 bg-gray-300"></div>
@@ -260,13 +258,9 @@ const TrustBuilder: FC = (): JSX.Element => {
                 className="bg-white rounded-2xl p-6 shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300 text-center"
               >
                 <div className="text-4xl mb-3">{metric.icon}</div>
-                <div className={`text-3xl font-black mb-1 ${
-                  metric.color === "blue" ? "text-blue-600" :
-                  metric.color === "green" ? "text-green-600" :
-                  metric.color === "yellow" ? "text-yellow-500" :
-                  "text-purple-600"
-                }`}>
-                  {metric.value}{metric.suffix}
+                <div className={`text-3xl font-black mb-1 ${metric.color === "blue" ? "text-blue-600" : metric.color === "green" ? "text-green-600" : metric.color === "yellow" ? "text-yellow-500" : "text-purple-600"}`}>
+                  {metric.value}
+                  {metric.suffix}
                 </div>
                 <div className="text-lg font-bold text-gray-900 mb-1">{metric.label}</div>
                 <div className="text-sm text-gray-600">{metric.description}</div>
