@@ -1,0 +1,63 @@
+{
+  "scanTimestamp": "2025-10-04T19:36:39-05:00",
+  "linting": {
+    "lintFixStatus": "✅ SUCCESS",
+    "result": "ESLint ran successfully with 1 remaining issue (non-autofixable display name warning in services.test.tsx)",
+    "filesProcessed": 150,
+    "formattingApplied": false
+  },
+  "formatting": {
+    "prettierStatus": "✅ SUCCESS",
+    "result": "All 150 files formatted successfully with Prettier",
+    "filesProcessed": 150,
+    "formattingApplied": true
+  },
+  "testing": {
+    "testStatus": "⚠️ PARTIAL SUCCESS - ATTEMPTING FIXES",
+    "totalSuites": 6,
+    "passedSuites": 2,
+    "failedSuites": 4,
+    "totalTests": 22,
+    "passedTests": 9,
+    "failedTests": 13,
+    "coverage": "16.07% overall coverage",
+    "failures": [
+      {
+        "file": "src/__tests__/services.test.tsx",
+        "error": "TypeError: Cannot read properties of undefined (reading 'title')",
+        "type": "Service data access issue",
+        "severity": "high",
+        "fixRequired": "Debug SERVICES_DATA access in test environment"
+      },
+      {
+        "file": "src/__tests__/ContactForm.test.tsx",
+        "error": "Unable to find an accessible element with role 'button' and name '/finish/i'",
+        "type": "UI interaction mismatch",
+        "severity": "medium",
+        "fixRequired": "Update test expectations to match current form flow"
+      },
+      {
+        "file": "src/__tests__/[city].test.tsx",
+        "error": "TypeError: Cannot read properties of null (reading 'city')",
+        "type": "Data structure expectation",
+        "severity": "high",
+        "fixRequired": "Fix mock location data structure"
+      },
+      {
+        "file": "src/__tests__/[city].test.tsx",
+        "error": "Expected getStaticProps return object discrepancy",
+        "type": "Data structure expectation",
+        "severity": "medium",
+        "fixRequired": "Update test expectations to match current implementation"
+      },
+      {
+        "file": "src/__tests__/schedule-pickup.test.tsx",
+        "error": "fetch not called with expected arguments",
+        "type": "API interaction",
+        "severity": "medium",
+        "fixRequired": "Debug form submission in test environment"
+      }
+    ]
+  },
+  "recommendations": ["Fix service data access issue causing services.test.tsx failure", "Update ContactForm test expectations to match current step flow", "Fix location data mocking in [city].test.tsx", "Debug schedule-pickup.test.tsx form submission mocking", "Consider adding error boundaries and null checks for more robust testing", "Review test data structures to ensure they match current data shapes"]
+}

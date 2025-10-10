@@ -1,0 +1,51 @@
+[
+  {
+    "file": "src/pages/sustainability.tsx",
+    "adjustment": "Added ISN certification logo alongside R2 certification",
+    "rationale": "Enhances credibility by showing both environmental and safety certifications",
+    "impact": "medium",
+    "affectedSection": "Our Certifications section"
+  },
+  {
+    "file": "src/pages/sustainability.tsx",
+    "adjustment": "Replaced placeholder image with actual company image",
+    "rationale": "Eliminates placeholder content and uses authentic company imagery",
+    "impact": "medium",
+    "affectedSection": "Certifications section"
+  },
+  {
+    "file": "src/pages/sustainability.tsx",
+    "adjustment": "Replaced placeholder with Construction.jpg for community events",
+    "rationale": "Uses real company imagery instead of placeholder for better brand consistency",
+    "impact": "low",
+    "affectedSection": "Community Engagement section"
+  },
+  {
+    "file": "src/pages/about.tsx",
+    "adjustment": "Enhanced alt text for certification logos",
+    "rationale": "Improved accessibility and SEO with descriptive alt text",
+    "impact": "low",
+    "affectedSection": "Awards and Certifications section"
+  },
+  {
+    "file": "src/pages/contact.tsx",
+    "adjustment": "Enhanced alt text for customer service image",
+    "rationale": "Better accessibility and context for screen readers",
+    "impact": "low",
+    "affectedSection": "Customer Service Excellence section"
+  },
+  {
+    "file": "src/pages/locations.tsx",
+    "adjustment": "Enhanced alt text for hero background image",
+    "rationale": "Improved SEO and accessibility with descriptive alt text",
+    "impact": "low",
+    "affectedSection": "Hero section"
+  },
+  {
+    "file": "src/pages/careers.tsx",
+    "adjustment": "Enhanced alt text for team image",
+    "rationale": "Better accessibility and context for careers page imagery",
+    "impact": "low",
+    "affectedSection": "Why Work With Us section"
+  }
+]

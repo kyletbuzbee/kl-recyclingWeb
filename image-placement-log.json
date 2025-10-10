@@ -1,0 +1,72 @@
+[
+  {
+    "file": "src/pages/index.tsx",
+    "insertedSrc": "/images/roll-off-container-options.jpg",
+    "altText": "K&L Recycling comprehensive scrap metal services",
+    "width": 1200,
+    "height": 800,
+    "confidence": 0.95,
+    "reason": "Services hero image perfectly matches the services section content and showcases company capabilities",
+    "placement": "services section hero"
+  },
+  {
+    "file": "src/pages/about.tsx",
+    "insertedSrc": "/images/project-planning-scrap.jpg",
+    "altText": "K&L Recycling yard",
+    "width": 1200,
+    "height": 800,
+    "confidence": 0.9,
+    "reason": "Shows actual yard operations which aligns with the 'Our Story' section about starting with a single truck",
+    "placement": "Our Story section"
+  },
+  {
+    "file": "src/pages/about.tsx",
+    "insertedSrc": "/images/r2-certified-logo.png",
+    "altText": "R2 Certified",
+    "width": 120,
+    "height": 80,
+    "confidence": 1.0,
+    "reason": "Certification logo directly matches the awards section content",
+    "placement": "Awards and Certifications section"
+  },
+  {
+    "file": "src/pages/about.tsx",
+    "insertedSrc": "/images/isn-logo.png",
+    "altText": "ISN Compliant",
+    "width": 120,
+    "height": 80,
+    "confidence": 1.0,
+    "reason": "Safety certification logo matches the awards section",
+    "placement": "Awards and Certifications section"
+  },
+  {
+    "file": "src/pages/locations.tsx",
+    "insertedSrc": "/images/hero_background_high_res.jpg",
+    "altText": "K&L Recycling facilities across Texas and Kansas",
+    "width": 1200,
+    "height": 600,
+    "confidence": 0.85,
+    "reason": "Hero background shows company facilities which matches the locations page theme",
+    "placement": "hero section"
+  },
+  {
+    "file": "src/pages/contact.tsx",
+    "insertedSrc": "/images/roll-off-container.jpg",
+    "altText": "K&L Recycling customer service and facility",
+    "width": 1200,
+    "height": 800,
+    "confidence": 0.9,
+    "reason": "Shows customer service area and facility operations relevant to contact page",
+    "placement": "Customer Service Excellence section"
+  },
+  {
+    "file": "src/pages/careers.tsx",
+    "insertedSrc": "/images/Construction.jpg",
+    "altText": "K&L Recycling team working together in scrap yard",
+    "width": 1200,
+    "height": 800,
+    "confidence": 0.8,
+    "reason": "Shows team working environment which aligns with careers page theme",
+    "placement": "Why Work With Us section"
+  }
+]

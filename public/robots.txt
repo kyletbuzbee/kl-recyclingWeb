@@ -1,0 +1,25 @@
+User-agent: *
+Allow: /
+
+# Disallow access to admin pages
+Disallow: /admin/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /static/
+Disallow: /.well-known/
+Disallow: /node_modules/
+
+# Allow crawling of main content
+Allow: /services/
+Allow: /locations/
+Allow: /materials/
+Allow: /pricing/
+Allow: /contact/
+Allow: /about/
+Allow: /quote/
+
+# Sitemap location
+Sitemap: https://www.klrecycling.com/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
