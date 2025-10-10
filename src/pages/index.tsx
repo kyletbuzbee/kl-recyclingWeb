@@ -133,11 +133,6 @@ const HomePage: FC = (): JSX.Element => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 max-w-7xl mx-auto">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.1 }} className="bg-gradient-to-br from-green-50 to-emerald-50 p-6 md:p-8 rounded-2xl shadow-lg border border-green-200 hover:shadow-xl transition-all duration-300 group">
-              <div className="relative">
-                <div className="absolute -top-4 -right-4 w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden border-4 border-white shadow-lg group-hover:scale-105 transition-transform duration-300">
-                  <Image src="/assets/car_crushing_kl_services.jpg" alt="Auto crushing and metal processing services" fill className="object-cover" />
-                </div>
-              </div>
               <div className="flex items-center mb-4 md:mb-6">
                 <div className="w-12 h-12 md:w-16 md:h-16 bg-green-600 rounded-xl flex items-center justify-center mr-3 md:mr-4 flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
                   <svg className="w-5 h-5 md:w-8 md:h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -184,11 +179,6 @@ const HomePage: FC = (): JSX.Element => {
             </motion.div>
 
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.2 }} className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 md:p-8 rounded-2xl shadow-lg border border-blue-200 hover:shadow-xl transition-all duration-300 group">
-              <div className="relative">
-                <div className="absolute -top-4 -right-4 w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden border-4 border-white shadow-lg group-hover:scale-105 transition-transform duration-300">
-                  <Image src="/assets/roll_off_kl.jpg" alt="Roll-off container and construction site services" fill className="object-cover" />
-                </div>
-              </div>
               <div className="flex items-center mb-4 md:mb-6">
                 <div className="w-12 h-12 md:w-16 md:h-16 bg-blue-600 rounded-xl flex items-center justify-center mr-3 md:mr-4 flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
                   <svg className="w-5 h-5 md:w-8 md:h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -235,11 +225,6 @@ const HomePage: FC = (): JSX.Element => {
             </motion.div>
 
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.3 }} className="bg-gradient-to-br from-purple-50 to-indigo-50 p-6 md:p-8 rounded-2xl shadow-lg border border-purple-200 hover:shadow-xl transition-all duration-300 group">
-              <div className="relative">
-                <div className="absolute -top-4 -right-4 w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden border-4 border-white shadow-lg group-hover:scale-105 transition-transform duration-300">
-                  <Image src="/assets/construction_remodel_kl.jpg" alt="Construction and remodeling debris processing" fill className="object-cover" />
-                </div>
-              </div>
               <div className="flex items-center mb-4 md:mb-6">
                 <div className="w-12 h-12 md:w-16 md:h-16 bg-purple-600 rounded-xl flex items-center justify-center mr-3 md:mr-4 flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
                   <svg className="w-5 h-5 md:w-8 md:h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -355,7 +340,7 @@ const HomePage: FC = (): JSX.Element => {
               <motion.div key={material.name} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: index * 0.1 }} className="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 hover:scale-[1.02] transition-all duration-300 group cursor-pointer">
                 <div className="relative h-48 overflow-hidden">
                   <Image src={material.image} alt={`${material.name} - scrap metal we purchase`} fill className="object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
-                  <div className="absolute top-3 right-3 bg-green-500 group-hover:bg-royal-blue-700 text-white px-3 py-1 rounded-full text-sm font-bold transition-colors duration-300">{material.price}</div>
+                  <div className="absolute top-3 right-3 bg-green-500 group-hover:bg-royal-blue-700 text-white px-3 py-1 rounded-full text-xs font-bold transition-colors duration-300 max-w-[90px] truncate">{material.price}</div>
                 </div>
 
                 <div className="p-6">
