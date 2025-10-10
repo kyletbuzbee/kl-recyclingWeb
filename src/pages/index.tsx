@@ -291,56 +291,47 @@ const HomePage: FC = (): JSX.Element => {
               {
                 name: "Copper Wire & Pipe",
                 image: "/assets/non-ferrous/copper_1.jpg",
-                price: "$3.50-$4.50/lb",
                 description: "Clean copper materials",
               },
               {
                 name: "Aluminum Cans & Siding",
                 image: "/assets/non-ferrous/aluminum_cast.jpg",
-                price: "$0.60-$1.20/lb",
                 description: "All aluminum forms accepted",
               },
               {
                 name: "Steel & Iron",
                 image: "/assets/ferrous/long_iron.jpg",
-                price: "$0.08-$0.15/lb",
                 description: "Structural steel and iron",
               },
               {
                 name: "Brass & Bronze",
                 image: "/assets/non-ferrous/brass.jpg",
-                price: "$1.80-$2.50/lb",
                 description: "Decorative and plumbing fixtures",
               },
               {
                 name: "Stainless Steel",
                 image: "/assets/non-ferrous/stainlesssteel.jpg",
-                price: "$0.25-$0.45/lb",
                 description: "Cooking equipment and appliances",
               },
               {
                 name: "Electric Motors",
                 image: "/assets/non-ferrous/electric_motors.jpg",
-                price: "$0.15-$0.35/lb",
                 description: "Copper windings recovered",
               },
               {
                 name: "Lead & Batteries",
                 image: "/assets/ferrous/vehicles_accept_large.jpg",
-                price: "$0.12-$0.18/lb",
                 description: "Properly drained only",
               },
               {
                 name: "Demolition Scrap",
                 image: "/assets/services/project-planning-scrap.jpg",
-                price: "Call for Quote",
                 description: "Construction and building materials",
               },
             ].map((material, index) => (
               <motion.div key={material.name} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: index * 0.1 }} className="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 hover:scale-[1.02] transition-all duration-300 group cursor-pointer">
                 <div className="relative h-48 overflow-hidden">
                   <Image src={material.image} alt={`${material.name} - scrap metal we purchase`} fill className="object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
-                  <div className="absolute top-3 right-3 bg-green-500 group-hover:bg-royal-blue-700 text-white px-3 py-1 rounded-full text-xs font-bold transition-colors duration-300 max-w-[90px] truncate">{material.price}</div>
                 </div>
 
                 <div className="p-6">

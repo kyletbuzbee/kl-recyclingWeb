@@ -193,27 +193,6 @@ const TrustBuilder: FC = (): JSX.Element => {
           </div>
         </motion.div>
 
-        {/* Animated Trust Metrics */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={controls}
-          variants={{
-            visible: {
-              opacity: 1,
-              y: 0,
-              transition: { duration: 0.8, delay: 0.4 },
-            },
-          }}
-          className="mb-16"
-        >
-          <h3 className="text-2xl font-bold text-center text-gray-900 mb-8">Quantifiable Trust Built Over Decades</h3>
-          <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            {trustMetrics.map((metric, index) => (
-              <CounterAnimation key={metric.label} metric={metric} index={index} />
-            ))}
-          </div>
-        </motion.div>
-
         {/* Community Donations Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
