@@ -51,77 +51,7 @@ const HomePage: FC = (): JSX.Element => {
       {/* Trust Builder - Enhanced CTA with Trust Signals and Animated Metrics */}
       <TrustBuilder />
 
-      {/* Community Focus Section */}
-      <section className="py-20 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="inline-flex items-center bg-white/80 backdrop-blur-sm px-6 py-3 rounded-full border border-blue-200 mb-6">
-              <span className="text-2xl mr-3">🤝</span>
-              <span className="text-blue-700 font-semibold">Community & Service</span>
-            </motion.div>
 
-            <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6">Built by Our Community, For Our Community</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">Since 1956, we've grown from humble beginnings as a single truck operation to East Texas' most trusted scrap metal recycler. Because every customer matters, we deliver personalized service you can count on.</p>
-          </div>
-
-          {/* Community Values */}
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mt-16 bg-white/90 backdrop-blur-sm rounded-3xl p-8 border border-blue-200">
-            <div className="mb-8">
-              <Image src="/assets/layout_core_values.jpg" alt="Core Values - Family-owned, fair pricing, community commitment" width={800} height={400} className="rounded-2xl w-full object-cover" />
-            </div>
-            <h3 className="text-2xl font-bold text-center text-gray-900 mb-8">Our Community Commitment</h3>
-            <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">🏠</span>
-                </div>
-                <h4 className="font-bold text-gray-900 mb-2">Local Roots</h4>
-                <p className="text-gray-600 text-sm">Family-owned since 1956, serving the East Texas community with honest, reliable service.</p>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">👥</span>
-                </div>
-                <h4 className="font-bold text-gray-900 mb-2">Every Customer Counts</h4>
-                <p className="text-gray-600 text-sm">From homeowners with a few appliances to industrial facilities, we treat everyone the same - with respect and fair pricing.</p>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">❤️</span>
-                </div>
-                <h4 className="font-bold text-gray-900 mb-2">Community Impact</h4>
-                <p className="text-gray-600 text-sm">Create local jobs, support community organizations, and contribute to East Texas' sustainable future.</p>
-              </div>
-            </div>
-
-            <div className="mt-12 bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-6">
-              <div className="flex items-center justify-center space-x-4 text-center">
-                <div className="flex items-center space-x-2">
-                  <svg className="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
-                  </svg>
-                  <span className="text-blue-700 font-semibold">Family-Owned Values</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <svg className="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
-                  </svg>
-                  <span className="text-green-700 font-semibold">Fair Market Pricing</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <svg className="w-5 h-5 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
-                  </svg>
-                  <span className="text-purple-700 font-semibold">Community Support</span>
-                </div>
-              </div>
-              <p className="mt-4 text-gray-700 text-center text-sm">
-                <em>"We believe that sustainable practices and community investment go hand in hand. When you choose K&L, you're supporting a business that's committed to East Texas's future."</em>
-              </p>
-            </div>
-          </motion.div>
-        </div>
-      </section>
 
       {/* Who We Serve - Customer Segmentation */}
       <section className="py-20 bg-white">
