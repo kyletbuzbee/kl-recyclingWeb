@@ -253,7 +253,7 @@ const HomePage: FC = (): JSX.Element => {
               },
               {
                 name: "Demolition Scrap",
-                image: "/assets/services/project-planning-scrap.jpg",
+                image: "/assets/services/Construction.jpg",
                 description: "Construction and building materials",
               },
             ].map((material, index) => (
