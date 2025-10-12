@@ -3,8 +3,13 @@ import React from "react";
 const trustBadges = [
   {
     icon: "🏆",
-    title: "56+ Years",
+    title: "68+ Years",
     description: "Industry Experience",
+  },
+  {
+    icon: "♻️",
+    title: "10,000+ Tons",
+    description: "Recycled Annually",
   },
   {
     icon: "🏢",

@@ -23,6 +23,10 @@ jest.mock("../data/locations", () => ({
       },
       hours: "Mon-Fri: 8AM-5PM, Sat: 8AM-3PM",
       materials: ["Steel", "Copper"],
+      coordinates: {
+        lat: 38.3667,
+        lng: -98.7667,
+      },
     },
     "houston-county": {
       city: "Houston County",
@@ -35,6 +39,10 @@ jest.mock("../data/locations", () => ({
       },
       hours: "Mon-Sat 8-6",
       materials: ["Aluminum", "Brass"],
+      coordinates: {
+        lat: 31.3189,
+        lng: -95.4561,
+      },
     },
   },
 }));

@@ -11,6 +11,7 @@ describe("useMultiStepForm", () => {
     const { result } = renderHook(() => useMultiStepForm([<Step1 key="1" />, <Step2 key="2" />, <Step3 key="3" />]));
     expect(result.current.currentStepIndex).toBe(0);
     expect(result.current.isFirstStep).toBe(true);
+    expect(result.current.step).toEqual(<Step1 key="1" />);
   });
 
   it("should go to the next step", () => {
@@ -19,6 +20,7 @@ describe("useMultiStepForm", () => {
       result.current.next();
     });
     expect(result.current.currentStepIndex).toBe(1);
+    expect(result.current.step).toEqual(<Step2 key="2" />);
   });
 
   it("should go to the previous step", () => {
@@ -59,5 +61,13 @@ describe("useMultiStepForm", () => {
       result.current.goTo(2);
     });
     expect(result.current.currentStepIndex).toBe(2);
+  });
+
+  it("should not change step when goTo is called with an invalid index", () => {
+    const { result } = renderHook(() => useMultiStepForm([<Step1 key="1" />, <Step2 key="2" />, <Step3 key="3" />]));
+    act(() => {
+      result.current.goTo(99);
+    });
+    expect(result.current.currentStepIndex).toBe(0);
   });
 });

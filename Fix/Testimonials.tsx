@@ -204,7 +204,7 @@ const Testimonials: FC = () => {
             </div>
             <div className="text-center">
               <div className="text-3xl mb-2">🕒</div>
-              <AnimatedCounter value={56} suffix="+" title="Years Experience" className="mb-2" duration={2800} />
+              <AnimatedCounter value={68} suffix="+" title="Years Experience" className="mb-2" duration={2800} />
             </div>
             <div className="text-center">
               <div className="text-3xl mb-2">🎯</div>

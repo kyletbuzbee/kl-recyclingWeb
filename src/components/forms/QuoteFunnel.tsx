@@ -73,14 +73,14 @@ const QuoteFunnel: FC<QuoteFunnelProps> = ({ onClose, initialService }) => {
 
       <div className="grid gap-4">
         {Object.entries(serviceForms).map(([id, config]) => (
-          <motion.button key={id} onClick={() => handleServiceSelect(id)} className={`p-6 rounded-xl border-2 transition-all duration-300 text-left ${selectedService === id ? "border-green-500 bg-green-50 shadow-lg" : "border-gray-200 hover:border-blue-300 hover:shadow-md"}`} whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
+          <motion.button key={id} onClick={() => handleServiceSelect(id)} className={`p-6 rounded-xl border-2 transition-all duration-300 text-left ${selectedService === id ? "border-blue-500 bg-blue-50 shadow-lg" : "border-gray-200 hover:border-blue-300 hover:shadow-md"}`} whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
             <div className="flex items-start space-x-4">
               <div className="text-3xl flex-shrink-0">{config.icon}</div>
               <div className="flex-1">
                 <h4 className="text-lg font-bold text-gray-900 mb-1">{config.name}</h4>
                 <p className="text-gray-600 text-sm mb-3">{config.description}</p>
                 {selectedService === id && (
-                  <div className="flex items-center text-green-600 text-sm font-medium">
+                  <div className="flex items-center text-blue-600 text-sm font-medium">
                     <svg className="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
@@ -122,7 +122,7 @@ const QuoteFunnel: FC<QuoteFunnelProps> = ({ onClose, initialService }) => {
               </label>
 
               {question.type === "select" && (
-                <select value={formData[question.id] || ""} onChange={(e) => handleInputChange(question.id, e.target.value)} className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent" required={question.required}>
+                <select value={formData[question.id] || ""} onChange={(e) => handleInputChange(question.id, e.target.value)} className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" required={question.required}>
                   <option value="">Select an option...</option>
                   {question.options?.map((option) => (
                     <option key={option.value} value={option.value}>
@@ -132,7 +132,7 @@ const QuoteFunnel: FC<QuoteFunnelProps> = ({ onClose, initialService }) => {
                 </select>
               )}
 
-              {question.type === "number" && <input type="number" value={formData[question.id] || ""} onChange={(e) => handleInputChange(question.id, parseInt(e.target.value))} placeholder={question.placeholder} className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent" min={question.validation?.min} required={question.required} />}
+              {question.type === "number" && <input type="number" value={formData[question.id] || ""} onChange={(e) => handleInputChange(question.id, parseInt(e.target.value))} placeholder={question.placeholder} className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" min={question.validation?.min} required={question.required} />}
 
               {question.type === "radio" && (
                 <div className="space-y-2">
@@ -145,11 +145,11 @@ const QuoteFunnel: FC<QuoteFunnelProps> = ({ onClose, initialService }) => {
                 </div>
               )}
 
-              {question.type === "textarea" && <textarea value={formData[question.id] || ""} onChange={(e) => handleInputChange(question.id, e.target.value)} placeholder={question.placeholder} className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent" rows={3} required={question.required} />}
+              {question.type === "textarea" && <textarea value={formData[question.id] || ""} onChange={(e) => handleInputChange(question.id, e.target.value)} placeholder={question.placeholder} className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" rows={3} required={question.required} />}
 
               {question.type === "file" && (
                 <div className="space-y-2">
-                  <input type="file" onChange={(e) => handleInputChange(question.id, e.target.files?.[0])} accept="image/*" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent" required={question.required} />
+                  <input type="file" onChange={(e) => handleInputChange(question.id, e.target.files?.[0])} accept="image/*" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" required={question.required} />
                   <p className="text-xs text-gray-500">{question.validation?.message}</p>
                 </div>
               )}
@@ -175,15 +175,15 @@ const QuoteFunnel: FC<QuoteFunnelProps> = ({ onClose, initialService }) => {
               {question.required && <span className="text-red-500 ml-1">*</span>}
             </label>
 
-            {question.type === "text" && <input type="text" value={formData[question.id] || ""} onChange={(e) => handleInputChange(question.id, e.target.value)} placeholder={question.placeholder} className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent" required={question.required} />}
+            {question.type === "text" && <input type="text" value={formData[question.id] || ""} onChange={(e) => handleInputChange(question.id, e.target.value)} placeholder={question.placeholder} className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" required={question.required} />}
 
-            {question.type === "textarea" && <textarea value={formData[question.id] || ""} onChange={(e) => handleInputChange(question.id, e.target.value)} placeholder={question.placeholder} className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent" rows={3} required={question.required} />}
+            {question.type === "textarea" && <textarea value={formData[question.id] || ""} onChange={(e) => handleInputChange(question.id, e.target.value)} placeholder={question.placeholder} className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" rows={3} required={question.required} />}
           </div>
         ))}
       </div>
 
-      <div className="bg-green-50 p-4 rounded-lg">
-        <p className="text-green-800 text-sm">
+      <div className="bg-blue-50 p-4 rounded-lg">
+        <p className="text-blue-800 text-sm">
           🛡️ <strong>Privacy Protected:</strong> We only collect information needed to provide your quote. Your data is secure and never shared with third parties.
         </p>
       </div>
@@ -211,7 +211,7 @@ const QuoteFunnel: FC<QuoteFunnelProps> = ({ onClose, initialService }) => {
             {steps.map((step, index) => (
               <React.Fragment key={step.id}>
                 <div className="flex items-center">
-                  <div className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-medium ${index <= currentStep ? "bg-green-600 text-white" : "bg-gray-300 text-gray-600"}`}>
+                  <div className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-medium ${index <= currentStep ? "bg-blue-600 text-white" : "bg-gray-300 text-gray-600"}`}>
                     {index < currentStep ? (
                       <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
@@ -220,9 +220,9 @@ const QuoteFunnel: FC<QuoteFunnelProps> = ({ onClose, initialService }) => {
                       index + 1
                     )}
                   </div>
-                  <span className={`ml-2 text-sm font-medium ${index <= currentStep ? "text-green-600" : "text-gray-500"}`}>{step.title}</span>
+                  <span className={`ml-2 text-sm font-medium ${index <= currentStep ? "text-blue-600" : "text-gray-500"}`}>{step.title}</span>
                 </div>
-                {index < steps.length - 1 && <div className={`flex-1 h-px ${index < currentStep ? "bg-green-600" : "bg-gray-300"}`} />}
+                {index < steps.length - 1 && <div className={`flex-1 h-px ${index < currentStep ? "bg-blue-600" : "bg-gray-300"}`} />}
               </React.Fragment>
             ))}
           </div>
@@ -258,11 +258,11 @@ const QuoteFunnel: FC<QuoteFunnelProps> = ({ onClose, initialService }) => {
 
             <div className="flex items-center space-x-2">
               {currentStep === steps.length - 1 ? (
-                <button onClick={handleSubmit} className="px-8 py-3 bg-green-600 text-white text-sm font-medium rounded-lg hover:bg-green-700 transition-colors">
+                <button onClick={handleSubmit} className="px-8 py-3 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 transition-colors">
                   Submit Quote Request
                 </button>
               ) : (
-                <button onClick={nextStep} className="px-8 py-3 bg-green-600 text-white text-sm font-medium rounded-lg hover:bg-green-700 transition-colors">
+                <button onClick={nextStep} className="px-8 py-3 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 transition-colors">
                   Next Step
                 </button>
               )}

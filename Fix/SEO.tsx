@@ -34,7 +34,7 @@ interface SEOProps {
   };
 }
 
-const SEO: FC<SEOProps> = ({ title, description = "Leading East Texas scrap metal recycling company in Tyler TX since 1956. Industrial recycling services, roll-off container rental, bulk material handling. Call for free quotes.", image = "https://www.klrecycling.com/images/hero_background_high_res.jpg", url = "https://www.klrecycling.com", keywords = "East Texas scrap metal recycling, scrap yard Tyler TX, bulk material handling Texas, industrial recycling services, roll-off container rental East Texas", twitterCard = "summary_large_image", structuredData, type = "website", article, businessSchema }) => {
+const SEO: FC<SEOProps> = ({ title, description = "Leading East Texas scrap metal recycling company in Tyler TX since 1956. Industrial recycling services, roll-off container rental, demolition debris handling.", image = "https://www.klrecycling.com/images/hero_background_high_res.jpg", url = "https://www.klrecycling.com", keywords = "East Texas scrap metal recycling, scrap yard Tyler TX, bulk material handling Texas, industrial recycling services, roll-off container rental East Texas", twitterCard = "summary_large_image", structuredData, type = "website", article, businessSchema }) => {
   const siteName = "K&L Recycling";
   const fullTitle = title ? `${title} | ${siteName}` : siteName;
 

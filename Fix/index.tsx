@@ -15,10 +15,14 @@ import TrustBuilder from "@/components/TrustBuilder";
 const Hero = dynamic(() => import("@/components/Hero"));
 const TrustBadges = dynamic(() => import("@/components/TrustBadges").then((mod) => mod.TrustBadges));
 const Testimonials = dynamic(() => import("@/components/Testimonials"));
+const SchedulePickupWidget = dynamic(() => import("@/components/SchedulePickupWidget"));
 
 const HomePage: FC = (): JSX.Element => {
   return (
     <Layout>
+      {/* Animated Banner */}
+      <AnimatedBanner />
+
       <SEO
         title="East Texas Scrap Metal Recycling - Fair Pricing Since 1956"
         description="Leading East Texas scrap metal recycling company in Tyler TX since 1956. Industrial recycling services, roll-off container rental, bulk material handling. Call for free quotes."
@@ -43,31 +47,82 @@ const HomePage: FC = (): JSX.Element => {
           sameAs: ["https://www.facebook.com/KLRecycling", "https://www.linkedin.com/company/k-l-recycling"],
         }}
       />
+      <Hero />
 
-      {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center">
-        <div className="absolute inset-0">
-          <Image
-            src="/assets/layout/hero-background.jpg"
-            alt="Industrial scrapyard with machinery"
-            fill
-            className="object-cover"
-            priority
-          />
-          <div className="absolute inset-0 bg-black bg-opacity-50"></div>
-        </div>
-        <div className="relative text-center text-white z-10 max-w-4xl mx-auto px-6">
-          <h1 className="text-5xl md:text-7xl font-black mb-8 leading-tight">
-            50 Years of East Texas Recycling: Maximum Value, Minimum Hassle
-          </h1>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <Link href="/quote" className="bg-green-600 hover:bg-green-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
-              Get Free Quote
-            </Link>
-            <Link href="/locations" className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
-              Find Locations
-            </Link>
+      {/* Trust Builder - Enhanced CTA with Trust Signals and Animated Metrics */}
+      <TrustBuilder />
+
+      {/* Community Focus Section */}
+      <section className="py-20 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="inline-flex items-center bg-white/80 backdrop-blur-sm px-6 py-3 rounded-full border border-blue-200 mb-6">
+              <span className="text-2xl mr-3">🤝</span>
+              <span className="text-blue-700 font-semibold">Community & Service</span>
+            </motion.div>
+
+            <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6">Built by Our Community, For Our Community</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">Since 1956, we've grown from humble beginnings as a single truck operation to East Texas' most trusted scrap metal recycler. Because every customer matters, we deliver personalized service you can count on.</p>
           </div>
+
+          {/* Schedule Pickup Widget - Full Width */}
+          <div className="w-full">
+            <SchedulePickupWidget />
+          </div>
+
+          {/* Community Values */}
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mt-16 bg-white/90 backdrop-blur-sm rounded-3xl p-8 border border-blue-200">
+            <h3 className="text-2xl font-bold text-center text-gray-900 mb-8">Our Community Commitment</h3>
+            <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl">🏠</span>
+                </div>
+                <h4 className="font-bold text-gray-900 mb-2">Local Roots</h4>
+                <p className="text-gray-600 text-sm">Family-owned since 1956, serving the East Texas community with honest, reliable service.</p>
+              </div>
+              <div className="text-center">
+                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl">👥</span>
+                </div>
+                <h4 className="font-bold text-gray-900 mb-2">Every Customer Counts</h4>
+                <p className="text-gray-600 text-sm">From homeowners with a few appliances to industrial facilities, we treat everyone the same - with respect and fair pricing.</p>
+              </div>
+              <div className="text-center">
+                <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl">❤️</span>
+                </div>
+                <h4 className="font-bold text-gray-900 mb-2">Community Impact</h4>
+                <p className="text-gray-600 text-sm">Create local jobs, support community organizations, and contribute to East Texas' sustainable future.</p>
+              </div>
+            </div>
+
+            <div className="mt-12 bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-6">
+              <div className="flex items-center justify-center space-x-4 text-center">
+                <div className="flex items-center space-x-2">
+                  <svg className="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  <span className="text-blue-700 font-semibold">Family-Owned Values</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <svg className="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  <span className="text-green-700 font-semibold">Fair Market Pricing</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <svg className="w-5 h-5 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  <span className="text-purple-700 font-semibold">Community Support</span>
+                </div>
+              </div>
+              <p className="mt-4 text-gray-700 text-center text-sm">
+                <em>"We believe that sustainable practices and community investment go hand in hand. When you choose K&L, you're supporting a business that's committed to East Texas's future."</em>
+              </p>
+            </div>
+          </motion.div>
         </div>
       </section>
 
@@ -144,7 +199,7 @@ const HomePage: FC = (): JSX.Element => {
                   <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                  Roll-off containers from 20-40 yards
+                  Roll-off containers from 10-40 yards
                 </div>
                 <div className="flex items-center text-sm text-blue-700">
                   <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
@@ -239,47 +294,56 @@ const HomePage: FC = (): JSX.Element => {
               {
                 name: "Copper Wire & Pipe",
                 image: "/assets/non-ferrous/copper_1.jpg",
+                price: "$3.50-$4.50/lb",
                 description: "Clean copper materials",
               },
               {
                 name: "Aluminum Cans & Siding",
                 image: "/assets/non-ferrous/aluminum_cast.jpg",
+                price: "$0.60-$1.20/lb",
                 description: "All aluminum forms accepted",
               },
               {
                 name: "Steel & Iron",
                 image: "/assets/ferrous/long_iron.jpg",
+                price: "$0.08-$0.15/lb",
                 description: "Structural steel and iron",
               },
               {
                 name: "Brass & Bronze",
                 image: "/assets/non-ferrous/brass.jpg",
+                price: "$1.80-$2.50/lb",
                 description: "Decorative and plumbing fixtures",
               },
               {
                 name: "Stainless Steel",
                 image: "/assets/non-ferrous/stainlesssteel.jpg",
+                price: "$0.25-$0.45/lb",
                 description: "Cooking equipment and appliances",
               },
               {
                 name: "Electric Motors",
                 image: "/assets/non-ferrous/electric_motors.jpg",
+                price: "$0.15-$0.35/lb",
                 description: "Copper windings recovered",
               },
               {
                 name: "Lead & Batteries",
                 image: "/assets/ferrous/vehicles_accept_large.jpg",
+                price: "$0.12-$0.18/lb",
                 description: "Properly drained only",
               },
               {
                 name: "Demolition Scrap",
                 image: "/assets/services/project-planning-scrap.jpg",
+                price: "Call for Quote",
                 description: "Construction and building materials",
               },
             ].map((material, index) => (
               <motion.div key={material.name} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: index * 0.1 }} className="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 hover:scale-[1.02] transition-all duration-300 group cursor-pointer">
                 <div className="relative h-48 overflow-hidden">
                   <Image src={material.image} alt={`${material.name} - scrap metal we purchase`} fill className="object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+                  <div className="absolute top-3 right-3 bg-green-500 group-hover:bg-royal-blue-700 text-white px-3 py-1 rounded-full text-sm font-bold transition-colors duration-300">{material.price}</div>
                 </div>
 
                 <div className="p-6">
@@ -334,7 +398,7 @@ const HomePage: FC = (): JSX.Element => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto">
-            {[SERVICES_DATA["mobile-crushing"], SERVICES_DATA["roll-off"]].map((service, index) => (
+            {[SERVICES_DATA.industrial, SERVICES_DATA["mobile-crushing"]].map((service, index) => (
               <motion.div key={service.id} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: index * 0.2 }} className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
                 <div className="relative h-64 overflow-hidden">
                   <Image src={service.image} alt={service.title} fill className="object-cover" loading="lazy" />
@@ -407,7 +471,7 @@ const HomePage: FC = (): JSX.Element => {
                         }
                       }}
                     >
-                      Schedule Services
+                      {service.id === "demolition" ? "Schedule Demolition" : "Book Mobile Service"}
                     </Link>
                   </div>
                 </div>

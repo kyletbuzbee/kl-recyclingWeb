@@ -1,0 +1,273 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - main [ref=e3]:
+    - generic [ref=e4]:
+      - generic [ref=e7]:
+        - link "K&L Recycling Home" [ref=e8] [cursor=pointer]:
+          - /url: /
+          - img "K&L Recycling Logo" [ref=e9]
+        - navigation "Main Navigation" [ref=e10]:
+          - list [ref=e11]:
+            - listitem [ref=e12]:
+              - link "Get Quote" [ref=e13] [cursor=pointer]:
+                - /url: /quote
+            - listitem [ref=e14]:
+              - link "Services" [ref=e15] [cursor=pointer]:
+                - /url: /services
+            - listitem [ref=e16]:
+              - link "Materials" [ref=e17] [cursor=pointer]:
+                - /url: /materials-guide
+            - listitem [ref=e18]:
+              - link "Locations" [ref=e19] [cursor=pointer]:
+                - /url: /locations
+            - listitem [ref=e20]:
+              - link "Contact" [ref=e21] [cursor=pointer]:
+                - /url: /contact
+            - listitem [ref=e22]:
+              - link "About" [ref=e23] [cursor=pointer]:
+                - /url: /about
+            - listitem [ref=e24]:
+              - link "Resources" [ref=e25] [cursor=pointer]:
+                - /url: /resources
+                - generic [ref=e26]: Resources
+                - img [ref=e27]
+        - generic [ref=e29]:
+          - link "(903) 592-6299" [ref=e30] [cursor=pointer]:
+            - /url: tel:+19035926299
+            - img [ref=e31]
+            - generic [ref=e33]: (903) 592-6299
+          - link "Schedule Services" [ref=e34] [cursor=pointer]:
+            - /url: /schedule-pickup
+      - main [ref=e35]:
+        - generic [ref=e37]:
+          - heading "Industrial Scrap Management Solutions" [level=1] [ref=e38]
+          - paragraph [ref=e39]: Professional-grade recycling services designed for manufacturing, demolition, and industrial operations across Texas and Kansas
+          - generic [ref=e40]:
+            - link "Get Free Quote" [ref=e41] [cursor=pointer]:
+              - /url: /contact#quote-tool
+            - link "Find Location" [ref=e42] [cursor=pointer]:
+              - /url: /locations
+        - generic [ref=e44]:
+          - generic [ref=e45]:
+            - heading "Service Categories" [level=2] [ref=e46]
+            - paragraph [ref=e47]: Choose the service category that best fits your needs
+          - generic [ref=e48]:
+            - generic [ref=e49]:
+              - generic [ref=e51]: 🏭
+              - heading "Industrial Services" [level=3] [ref=e52]
+              - paragraph [ref=e53]: Comprehensive solutions for manufacturing and industrial facilities
+              - img "Industrial Services" [ref=e55]
+              - generic [ref=e56]:
+                - generic [ref=e59]: Bulk Pickup Services
+                - generic [ref=e62]: Roll-Off Container Services
+            - generic [ref=e63]:
+              - generic [ref=e65]: 🏗️
+              - heading "Demolition & Construction" [level=3] [ref=e66]
+              - paragraph [ref=e67]: Specialized metal recovery from construction and demolition sites
+              - img "Demolition Services" [ref=e69]
+              - generic [ref=e73]: Demolition & Industrial Cleanup
+            - generic [ref=e74]:
+              - generic [ref=e76]: 👥
+              - heading "Public Services" [level=3] [ref=e77]
+              - paragraph [ref=e78]: Open to individuals and small businesses
+              - img "Public Services" [ref=e80]
+              - generic [ref=e81]:
+                - generic [ref=e84]: Public Drop-Off Services
+                - generic [ref=e87]: Mobile Car Crushing & On-Site Processing
+        - generic [ref=e89]:
+          - generic [ref=e90]:
+            - heading "Detailed Services" [level=2] [ref=e91]
+            - paragraph [ref=e92]: Click on any service to learn more about our offerings and pricing
+          - generic [ref=e93]:
+            - generic [ref=e94] [cursor=pointer]:
+              - generic [ref=e95]:
+                - img "Oilfield Demolition & Equipment Recovery" [ref=e96]
+                - generic [ref=e97]: 🛢️
+                - img [ref=e100]
+              - generic [ref=e102]:
+                - heading "Oilfield Demolition & Equipment Recovery" [level=3] [ref=e103]
+                - paragraph [ref=e104]: Specialized oilfield demolition with DISA certification. Complete removal and recycling of oilfield equipment including tanks, rig structures, and processing facilities.
+                - generic [ref=e105]:
+                  - heading "Key Benefits:" [level=4] [ref=e106]
+                  - generic [ref=e107]:
+                    - generic [ref=e110]: DISA compliance guaranteed
+                    - generic [ref=e113]: Maximize value from specialized equipment
+                    - generic [ref=e116]: Environmental responsibility
+                - generic [ref=e117]:
+                  - generic [ref=e118]: Learn More →
+                  - generic [ref=e119]: Click to expand
+            - generic [ref=e120] [cursor=pointer]:
+              - generic [ref=e121]:
+                - img "Bulk Pickup Services" [ref=e122]
+                - generic [ref=e123]: 🚛
+                - img [ref=e126]
+              - generic [ref=e128]:
+                - heading "Bulk Pickup Services" [level=3] [ref=e129]
+                - paragraph [ref=e130]: Large-scale scrap metal collection with specialized equipment and transport. Industrial-grade handling for commercial and industrial operations.
+                - generic [ref=e131]:
+                  - heading "Key Benefits:" [level=4] [ref=e132]
+                  - generic [ref=e133]:
+                    - generic [ref=e136]: Large capacity collection
+                    - generic [ref=e139]: Dedicated equipment and crews
+                    - generic [ref=e142]: Minimize operational downtime
+                - generic [ref=e143]:
+                  - generic [ref=e144]: Learn More →
+                  - generic [ref=e145]: Click to expand
+            - generic [ref=e146] [cursor=pointer]:
+              - generic [ref=e147]:
+                - img "Demolition & Industrial Cleanup" [ref=e148]
+                - generic [ref=e149]: 🏗️
+                - img [ref=e152]
+              - generic [ref=e154]:
+                - heading "Demolition & Industrial Cleanup" [level=3] [ref=e155]
+                - paragraph [ref=e156]: 50+ years of specialized demolition experience across Texas, Oklahoma, Kansas, Louisiana, Arkansas & New Mexico with mobile crews available nationwide.
+                - generic [ref=e157]:
+                  - heading "Key Benefits:" [level=4] [ref=e158]
+                  - generic [ref=e159]:
+                    - generic [ref=e162]: Professional removal of oilfield and industrial equipment
+                    - generic [ref=e165]: Nationwide mobile service availability
+                    - generic [ref=e168]: Zero environmental liability transfer
+                - generic [ref=e169]:
+                  - generic [ref=e170]: Learn More →
+                  - generic [ref=e171]: Click to expand
+            - generic [ref=e172] [cursor=pointer]:
+              - generic [ref=e173]:
+                - img "Roll-Off Container Services" [ref=e174]
+                - generic [ref=e175]: 📦
+                - img [ref=e178]
+              - generic [ref=e180]:
+                - heading "Roll-Off Container Services" [level=3] [ref=e181]
+                - paragraph [ref=e182]: East Texas businesses rely on our roll-off container rental for dependable scrap metal collection. Right-sized containers, timely service, fair pricing.
+                - generic [ref=e183]:
+                  - heading "Key Benefits:" [level=4] [ref=e184]
+                  - generic [ref=e185]:
+                    - generic [ref=e188]: Store scrap on-site without truck trips
+                    - generic [ref=e191]: Rent by the month or longer
+                    - generic [ref=e194]: No hidden rental fees
+                - generic [ref=e195]:
+                  - generic [ref=e196]: Learn More →
+                  - generic [ref=e197]: Click to expand
+            - generic [ref=e198] [cursor=pointer]:
+              - generic [ref=e199]:
+                - img "Mobile Car Crushing & On-Site Processing" [ref=e200]
+                - generic [ref=e201]: 🔥
+                - img [ref=e204]
+              - generic [ref=e206]:
+                - heading "Mobile Car Crushing & On-Site Processing" [level=3] [ref=e207]
+                - paragraph [ref=e208]: Our mobile crushing team brings industrial-grade processing directly to your location across TX, OK, LA, NM, KS, and AR. Cash paid on-site for all vehicles.
+                - generic [ref=e209]:
+                  - heading "Key Benefits:" [level=4] [ref=e210]
+                  - generic [ref=e211]:
+                    - generic [ref=e214]: Save on transportation costs - we come to you
+                    - generic [ref=e217]: IMMEDIATE cash payment with no waiting period
+                    - generic [ref=e220]: Environmentally responsible processing
+                - generic [ref=e221]:
+                  - generic [ref=e222]: Learn More →
+                  - generic [ref=e223]: Click to expand
+            - generic [ref=e224] [cursor=pointer]:
+              - generic [ref=e225]:
+                - img "Public Drop-Off Services" [ref=e226]
+                - generic [ref=e227]: 🧑‍🔧
+                - img [ref=e230]
+              - generic [ref=e232]:
+                - heading "Public Drop-Off Services" [level=3] [ref=e233]
+                - paragraph [ref=e234]: East Texas families and small businesses find us to be the straightforward choice for scrap metal drop-offs. Fair prices, no runaround, community values.
+                - generic [ref=e235]:
+                  - heading "Key Benefits:" [level=4] [ref=e236]
+                  - generic [ref=e237]:
+                    - generic [ref=e240]: Stop in anytime, no appointment needed
+                    - generic [ref=e243]: Get what your scrap is really worth
+                    - generic [ref=e246]: Payment right as you leave the scale
+                - generic [ref=e247]:
+                  - generic [ref=e248]: Learn More →
+                  - generic [ref=e249]: Click to expand
+        - generic [ref=e251]:
+          - generic [ref=e252]:
+            - heading "Interactive Container Visualization" [level=2] [ref=e253]
+            - paragraph [ref=e254]: Explore our roll-off container sizes with this interactive 3D model. Switch between sizes to see capacity and dimensions.
+          - generic [ref=e256]:
+            - generic [ref=e257]:
+              - generic [ref=e258]:
+                - generic [ref=e259]:
+                  - generic [ref=e260]: "Container Size:"
+                  - button "20-yard" [ref=e261] [cursor=pointer]
+                  - button "30-yard" [ref=e262] [cursor=pointer]
+                  - button "40-yard" [ref=e263] [cursor=pointer]
+                - generic [ref=e264]:
+                  - button "Hide Measurements" [ref=e265] [cursor=pointer]
+                  - button "Auto Rotate" [ref=e266] [cursor=pointer]
+              - generic [ref=e267]:
+                - generic [ref=e268]:
+                  - generic [ref=e269]: 22'
+                  - generic [ref=e270]: Length
+                - generic [ref=e271]:
+                  - generic [ref=e272]: 8'
+                  - generic [ref=e273]: Width
+                - generic [ref=e274]:
+                  - generic [ref=e275]: 8'
+                  - generic [ref=e276]: Height
+                - generic [ref=e277]:
+                  - generic [ref=e278]: 40 cubic yards
+                  - generic [ref=e279]: Capacity
+            - generic [ref=e284]:
+              - generic [ref=e285]: "Controls:"
+              - generic [ref=e286]: • Drag to rotate
+              - generic [ref=e287]: • Scroll to zoom
+              - generic [ref=e288]: • Right-click to pan
+          - generic [ref=e289]:
+            - generic [ref=e290]:
+              - img [ref=e292]
+              - heading "Size Selection" [level=3] [ref=e294]
+              - paragraph [ref=e295]: Choose the perfect container size for your project needs
+            - generic [ref=e296]:
+              - img [ref=e298]
+              - heading "Visual Comparison" [level=3] [ref=e300]
+              - paragraph [ref=e301]: See actual dimensions and capacity differences between sizes
+            - generic [ref=e302]:
+              - img [ref=e304]
+              - heading "Smart Scheduling" [level=3] [ref=e306]
+              - paragraph [ref=e307]: Use scheduling tools that adapt to your timeline and needs
+        - generic [ref=e310]:
+          - link "Get Free Quote" [ref=e311] [cursor=pointer]:
+            - /url: /contact#quote-tool
+          - link "Find Location" [ref=e312] [cursor=pointer]:
+            - /url: /locations
+      - generic [ref=e314]:
+        - generic [ref=e315]:
+          - generic [ref=e316]:
+            - heading "K&L Recycling" [level=3] [ref=e317]
+            - paragraph [ref=e318]: Your trusted partner in responsible metal recycling.
+          - generic [ref=e319]:
+            - heading "Quick Links" [level=3] [ref=e320]
+            - list [ref=e321]:
+              - listitem [ref=e322]:
+                - link "Services" [ref=e323] [cursor=pointer]:
+                  - /url: /services
+              - listitem [ref=e324]:
+                - link "Materials Accepted" [ref=e325] [cursor=pointer]:
+                  - /url: /materials
+              - listitem [ref=e326]:
+                - link "Contact Us" [ref=e327] [cursor=pointer]:
+                  - /url: /contact
+          - generic [ref=e328]:
+            - heading "Contact" [level=3] [ref=e329]
+            - paragraph [ref=e330]:
+              - text: 4134 Chandler Hwy
+              - text: Tyler, Texas 75702
+            - paragraph [ref=e331]: (903) 592-6299
+          - generic [ref=e332]:
+            - heading "Follow Us" [level=3] [ref=e333]
+            - generic "Social Media" [ref=e334]:
+              - link "K&L Recycling on Facebook" [ref=e335] [cursor=pointer]:
+                - /url: https://facebook.com/klrecycling
+                - img [ref=e336]
+              - link "K&L Recycling on LinkedIn" [ref=e338] [cursor=pointer]:
+                - /url: https://linkedin.com/company/klrecycling
+                - img [ref=e339]
+        - paragraph [ref=e342]: © 2025 K&L Recycling. All Rights Reserved.
+      - button "Open chat" [ref=e344] [cursor=pointer]:
+        - img [ref=e346]
+  - alert [ref=e349]
+```

@@ -117,4 +117,52 @@ export const validateFile = (file: { size: number; type: string }): { isValid: b
   return { isValid: true };
 };
 
-export default cloudinary;
+// Next.js Image loader configuration for Cloudinary
+export const cloudinaryLoader = ({ src, width, quality }: { src: string; width: number; quality?: number }): string => {
+  // If the src is already a full Cloudinary URL, transform it
+  if (src.includes("cloudinary.com")) {
+    return src.replace("/upload/", `/upload/q_${quality || "auto"},f_webp,w_${width},c_limit/`);
+  }
+
+  // For local assets, construct Cloudinary URL
+  const publicId = src.startsWith("/") ? src.substring(1) : src;
+  const baseUrl = `https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload`;
+
+  return `${baseUrl}/q_${quality || "auto"},f_webp,w_${width},c_limit/${publicId}`;
+};
+
+// Configuration for Next.js Image component
+export const nextJsImageConfig = {
+  loader: cloudinaryLoader,
+  path: "",
+  unoptimized: false,
+};
+
+// Generate responsive srcSet for images
+export const getSrcSet = (src: string, widths: number[] = [320, 640, 768, 1024, 1280, 1920]): string => {
+  if (src.includes("cloudinary.com")) {
+    // Already Cloudinary URL - transform for each width
+    return widths.map((width) => `${src.replace("/upload/", `/upload/q_auto,f_webp,w_${width},c_limit/`)} ${width}w`).join(", ");
+  }
+
+  // Local asset - construct Cloudinary URLs
+  const publicId = src.startsWith("/") ? src.substring(1) : src;
+  const baseUrl = `https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload`;
+
+  return widths.map((width) => `${baseUrl}/q_auto,f_webp,w_${width},c_limit/${publicId} ${width}w`).join(", ");
+};
+
+// Fallback image for lazy loading placeholders
+export const getPlaceholderSrc = (src: string, width: number = 32): string => {
+  if (src.includes("cloudinary.com")) {
+    return src.replace("/upload/", `/upload/q_auto,f_webp,w_${width},c_limit,e_blur:1000/`);
+  }
+
+  const publicId = src.startsWith("/") ? src.substring(1) : src;
+  const baseUrl = `https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload`;
+
+  return `${baseUrl}/q_auto,f_webp,w_${width},c_limit,e_blur:1000/${publicId}`;
+};
+
+// Default export is required for Next.js custom loader
+export default cloudinaryLoader;

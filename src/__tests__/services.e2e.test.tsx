@@ -13,22 +13,17 @@ test.describe("Services Page: Read-only Checks", () => {
     await page.goto("/services");
 
     // Check that the main heading is visible
-    await expect(
-      page.getByRole("heading", {
-        name: "Industrial Scrap Management Solutions",
-      }),
-    ).toBeVisible();
+    await expect(page.getByRole("heading", { name: /Industrial Scrap Management Solutions/i })).toBeVisible();
 
     // Check that all service categories are displayed
+    await expect(page.getByText("Service Categories")).toBeVisible();
     await expect(page.getByText("Industrial Services")).toBeVisible();
-    await expect(page.getByText("Mobile Car Crushing & On-Site Processing")).toBeVisible();
     await expect(page.getByText("Demolition & Construction")).toBeVisible();
     await expect(page.getByText("Public Services")).toBeVisible();
 
-    // Check that each category has an icon (from the first section with service categories)
-    // FIX: Asserting a specific count is brittle. Check for a reasonable number.
-    const icons = page.locator("span.text-2xl"); // Assuming this class is specific to these icons
-    await expect(icons).toHaveCount(4); // Keeping 4 as it seems intentional for the design.
+    // Check that there are service cards (9 total: 3 categories + 6 detailed services)
+    const serviceCards = page.locator(".service-card");
+    await expect(serviceCards).toHaveCount(9);
 
     // --- Merged SEO Test ---
     // Check page title

@@ -15,6 +15,6 @@ module.exports = createJestConfig({
   testMatch: ["<rootDir>/src/**/*.test.(ts|tsx)"],
   collectCoverage: true,
   coverageDirectory: "coverage",
-  coverageReporters: ["text", "lcov"],
+  coverageReporters: ["text-summary", "lcov"],
   collectCoverageFrom: ["src/components/**/*.{ts,tsx}", "src/pages/**/*.{ts,tsx}", "!src/pages/_*.{ts,tsx}", "!**/node_modules/**", "!**/*.d.ts"],
 });

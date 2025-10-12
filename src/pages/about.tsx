@@ -38,18 +38,26 @@ const AboutPage: FC = () => {
             <div className="w-full overflow-hidden">
               <div className="flex">
                 <motion.div
-                  className="flex-shrink-0 text-xl md:text-2xl lg:text-3xl text-blue-100 leading-relaxed whitespace-nowrap"
-                  animate={{ x: [1920, -4000] }}
+                  className="flex-shrink-0 text-xl md:text-2xl lg:text-3xl text-blue-100 leading-relaxed whitespace-nowrap font-bold"
+                  animate={{
+                    x: [1920, -4000],
+                    color: ["#dbeafe", "#fbbf24", "#dbeafe"],
+                  }}
                   transition={{
                     x: {
                       repeat: Infinity,
                       repeatType: "reset",
-                      duration: 30,
+                      duration: 56,
                       ease: "linear",
+                    },
+                    color: {
+                      repeat: Infinity,
+                      duration: 3,
+                      ease: "easeInOut",
                     },
                   }}
                 >
-                  Family-Owned Since 1956 • 8 Locations Across Texas & Kansas • 68+ Years of Fair Pricing • ISN Certified • R2 Responsible Recycling • Award-Winning Safety Standards • East Texas' Most Trusted • Industry Leaders Since 1956 • Customer Satisfaction Guaranteed • Local Community Proud • Toll-Free: 800-533-8081 • Same-Day Service Available • Competitive Rates • Expert Metal Sorting • Compliant with EPA Standards • Community Investment • Future-Focused Recycling Innovation • Certified Professional Staff • State-of-the-Art Equipment • Rigorous Safety Protocols • Environmental Stewardship • Sustainable Business Practices • Customer-Centric Approach • 24/7 Recycling Solutions • Trusted by East Texas Businesses • Quality Metal Recovery • Fair Market Pricing Guarantee • R2 Responsible
+                  Family-Owned Since 1956 • 8 Locations Across Texas & Kansas • 56+ Years of Fair Pricing • ISN Certified • R2 Responsible Recycling • Award-Winning Safety Standards • East Texas' Most Trusted • Industry Leaders Since 1956 • Customer Satisfaction Guaranteed • Local Community Proud • Toll-Free: 800-533-8081 • Same-Day Service Available • Competitive Rates • Expert Metal Sorting • Compliant with EPA Standards • Community Investment • Future-Focused Recycling Innovation • Certified Professional Staff • State-of-the-Art Equipment • Rigorous Safety Protocols • Environmental Stewardship • Sustainable Business Practices • Customer-Centric Approach • 24/7 Recycling Solutions • Trusted by East Texas Businesses • Quality Metal Recovery • Fair Market Pricing Guarantee • R2 Responsible
                   Recycling Certified • ISN Industry Safety Standards • Award-Winning Service Excellence • Generations of Family Ownership • Local East Texas Heritage • Kansas Service Expansion • Professional Customer Service • Advanced Recycling Technology • Metal Recovery Experts • Scrap Metal Processors • Environmentally Conscious Operations • Community-Focused Business Model •
                 </motion.div>
               </div>
@@ -58,7 +66,7 @@ const AboutPage: FC = () => {
             {/* Trust Stats Bar */}
             <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
-                <div className="text-3xl md:text-4xl font-black text-orange-300 mb-2">68+</div>
+                <div className="text-3xl md:text-4xl font-black text-orange-300 mb-2">56+</div>
                 <div className="text-sm md:text-base font-semibold">Years of Service</div>
                 <div className="text-xs text-blue-200 mt-1">Reliable Since 1956</div>
               </div>

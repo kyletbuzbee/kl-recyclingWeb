@@ -1,0 +1,30 @@
+## Files Associated with the Home Page
+
+The home page is located at `src/pages/index.tsx` and depends on the following files:
+
+### Core Page File
+
+- __`src/pages/index.tsx`__ - Main homepage component
+
+### Components Used on Homepage
+
+- __`src/components/Hero.tsx`__ ⭐ - Main hero section (recently updated)
+- __`src/components/Layout.tsx`__ - Layout wrapper
+- __`src/components/SEO.tsx`__ - SEO metadata
+- __`src/components/TrustBadges.tsx`__ - Trust and certification badges
+- __`src/components/Testimonials.tsx`__ - Customer testimonials section
+
+### Data Files
+
+- __`src/data/services.ts`__ - Service definitions used in operational services section
+
+### Additional Assets
+
+- __Global CSS__: `src/styles/globals.css`
+- __Images__: Various images in `public/assets/` referenced throughout the page
+
+### Related Templates/Structures
+
+- __`src/pages/_app.tsx`__ - App wrapper (imports global styles)
+- __`src/pages/_document.tsx`__ - Document head and meta
+

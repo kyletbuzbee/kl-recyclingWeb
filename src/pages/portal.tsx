@@ -9,7 +9,7 @@ const PortalPage: FC = () => {
       <Head>
         <title>Client Portal | K&L Recycling</title>
         <meta name="description" content="Access your K&L Recycling account, view past transactions, schedule pickups, and track container deliveries." />
-        <link rel="canonical" href="https://www.klrecycling.com/portal" />
+        <link rel="canonical" href="https://www.kl-recycling.com/portal" />
       </Head>
 
       {/* Hero Section */}

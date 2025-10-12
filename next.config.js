@@ -11,10 +11,10 @@ const nextConfig = {
   compress: true,
   poweredByHeader: false,
 
-  // Image optimization
+  // Enhanced Image optimization with Cloudinary integration
   images: {
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+    deviceSizes: [320, 640, 768, 1024, 1200, 1920, 2048],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384, 512],
     // Use remotePatterns for better security
     remotePatterns: [
       {
@@ -38,14 +38,21 @@ const nextConfig = {
         hostname: "res.cloudinary.com",
       },
     ],
-    // Enable modern image formats
+    // Enable modern image formats with priority on WebP
     formats: ["image/avif", "image/webp"],
+    // Additional optimization settings
+    dangerouslyAllowSVG: false,
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
 
-  // Optimize bundle
+  // Optimize bundle for development speed
   experimental: {
     optimizeCss: true,
     scrollRestoration: true,
+    // Add server components optimization
+    serverComponentsExternalPackages: [],
+    // Improve dev performance
+    workerThreads: false,
   },
 
   // Add security headers
