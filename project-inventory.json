@@ -1,0 +1,102 @@
+{
+  "scanTimestamp": "2025-10-04T19:06:33-05:00",
+  "sourceCode": {
+    "pages": {
+      "count": 13,
+      "files": ["src/pages/_app.tsx", "src/pages/_document.tsx", "src/pages/about.tsx", "src/pages/careers.tsx", "src/pages/contact.tsx", "src/pages/index.tsx", "src/pages/locations.tsx", "src/pages/materials.tsx", "src/pages/resources.tsx", "src/pages/schedule-pickup.tsx", "src/pages/services.tsx", "src/pages/sustainability.tsx", "src/pages/blog/[slug].tsx"],
+      "apiRoutes": ["src/pages/api/contact.ts", "src/pages/api/maps-key.ts", "src/pages/api/pricing.ts", "src/pages/api/schedule.ts"],
+      "locationPages": ["src/pages/locations/[city].tsx", "src/pages/locations/index.tsx"]
+    },
+    "components": {
+      "count": 18,
+      "files": ["src/components/AnimatedCounter.tsx", "src/components/ErrorBoundary.tsx", "src/components/FacebookIcon.tsx", "src/components/Footer.tsx", "src/components/Header.tsx", "src/components/Hero.tsx", "src/components/Layout.tsx", "src/components/LinkedInIcon.tsx", "src/components/LoadingSpinner.tsx", "src/components/Map.tsx", "src/components/RecyclingCalculator.tsx", "src/components/SEO.tsx", "src/components/ServiceModal.tsx", "src/components/Testimonials.tsx", "src/components/Toast.tsx", "src/components/TrustBadges.tsx", "src/components/ContactForm/ContactForm.tsx", "src/components/ContactForm/Step1.tsx", "src/components/ContactForm/Step2.tsx", "src/components/ContactForm/Step3.tsx"]
+    },
+    "dataFiles": {
+      "count": 3,
+      "files": ["src/data/locations.ts", "src/data/posts.ts", "src/data/services.ts"]
+    },
+    "hooks": {
+      "count": 2,
+      "files": ["src/hooks/useFormValidation.ts", "src/hooks/useMultiStepForm.tsx"]
+    },
+    "libFiles": {
+      "count": 1,
+      "files": ["src/lib/validation.ts"]
+    },
+    "styles": {
+      "count": 1,
+      "files": ["src/styles/globals.css"]
+    },
+    "types": {
+      "count": 2,
+      "files": ["src/types/global.d.ts", "src/types/index.ts"]
+    }
+  },
+  "staticAssets": {
+    "images": {
+      "count": 42,
+      "files": [
+        "public/images/aluminum_cast.jpg",
+        "public/images/aluminum_ch_whl.jpg",
+        "public/images/aluminum_whl.jpg",
+        "public/images/aluminum.png",
+        "public/images/brass.jpg",
+        "public/images/BusinessCardsRollOff-Back.jpg",
+        "public/images/BusinessCardsRollOff-Front.jpg",
+        "public/images/compressors.jpg",
+        "public/images/Construction.jpg",
+        "public/images/copper_1.jpg",
+        "public/images/copper_2.jpg",
+        "public/images/copper.png",
+        "public/images/cu_br_rad.jpg",
+        "public/images/dealer_clips.jpg",
+        "public/images/demolition-safety.png",
+        "public/images/electric_motors.jpg",
+        "public/images/gutters.jpg",
+        "public/images/hero_background_high_res.jpg",
+        "public/images/icw_1.jpg",
+        "public/images/IMG_1674 1.HEIC",
+        "public/images/IMG_1674 1.MOV",
+        "public/images/IMG_1674.HEIC",
+        "public/images/IMG_1674.MOV",
+        "public/images/IMG_1675 1.HEIC",
+        "public/images/IMG_1675 1.MOV",
+        "public/images/IMG_1675.HEIC",
+        "public/images/isn-logo.png",
+        "public/images/logo.png",
+        "public/images/long_iron.jpg",
+        "public/images/project-planning-scrap.jpg",
+        "public/images/r2-certified-logo.png",
+        "public/images/roll-off-container-options.jpg",
+        "public/images/roll-off-container.jpg",
+        "public/images/stainlesssteel.jpg",
+        "public/images/tin.jpg",
+        "public/images/vehicle_accept_odd.jpg",
+        "public/images/vehicles_accept_large.jpg",
+        "public/images/vehicles_accepted.jpg"
+      ],
+      "materialImages": ["aluminum_cast.jpg", "aluminum_ch_whl.jpg", "aluminum_whl.jpg", "aluminum.png", "brass.jpg", "copper_1.jpg", "copper_2.jpg", "copper.png", "stainlesssteel.jpg", "tin.jpg"],
+      "operationalImages": ["compressors.jpg", "electric_motors.jpg", "gutters.jpg", "long_iron.jpg"],
+      "serviceImages": ["roll-off-container.jpg", "roll-off-container-options.jpg", "Construction.jpg"],
+      "certificationImages": ["isn-logo.png", "r2-certified-logo.png"],
+      "mediaFiles": ["IMG_1674 1.HEIC", "IMG_1674 1.MOV", "IMG_1674.HEIC", "IMG_1674.MOV", "IMG_1675 1.HEIC", "IMG_1675 1.MOV", "IMG_1675.HEIC"]
+    },
+    "videos": {
+      "count": 1,
+      "files": ["public/videos/hero-background.mp4"]
+    }
+  },
+  "configs": {
+    "packageJson": "package.json",
+    "nextConfig": "next.config.js",
+    "tailwindConfig": "tailwind.config.js",
+    "tsConfig": "tsconfig.json",
+    "eslintConfig": ".eslintrc.js",
+    "jestConfig": "jest.config.js",
+    "postcssConfig": "postcss.config.js"
+  },
+  "unusedAssets": {
+    "potentialUnusedImages": ["IMG_1674 1.HEIC", "IMG_1674 1.MOV", "IMG_1674.HEIC", "IMG_1674.MOV", "IMG_1675 1.HEIC", "IMG_1675 1.MOV", "IMG_1675.HEIC"],
+    "note": "HEIC/MOV files may be unused if not referenced in components"
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "metadata": {
+    "created": "2025-10-04T18:26:17.000Z",
+    "totalInsertions": 6,
+    "project": "K&L Recycling Website",
+    "description": "Log of image insertions based on semantic context analysis"
+  },
+  "insertions": [
+    {
+      "file": "src/pages/about.tsx",
+      "imageSrc": "/images/project-planning-scrap.jpg",
+      "altText": "K&L Recycling yard",
+      "section": "Our Story section",
+      "confidence": 0.95,
+      "reasoning": "Image shows scrap yard planning/project context, matches 'Our Story' section about company history and operations",
+      "timestamp": "2025-10-04T18:23:50.000Z"
+    },
+    {
+      "file": "src/pages/careers.tsx",
+      "imageSrc": "/images/Construction.jpg",
+      "altText": "K&L Recycling team working together in scrap yard",
+      "section": "Why Work With Us section",
+      "confidence": 0.9,
+      "reasoning": "Construction/work environment image matches careers and team context",
+      "timestamp": "2025-10-04T18:24:09.000Z"
+    },
+    {
+      "file": "src/pages/contact.tsx",
+      "imageSrc": "/images/roll-off-container.jpg",
+      "altText": "K&L Recycling customer service and facility",
+      "section": "Customer Service Excellence section",
+      "confidence": 0.92,
+      "reasoning": "Roll-off container image represents service capabilities and facility operations",
+      "timestamp": "2025-10-04T18:25:00.000Z"
+    },
+    {
+      "file": "src/pages/index.tsx",
+      "imageSrc": "/images/roll-off-container-options.jpg",
+      "altText": "K&L Recycling comprehensive scrap metal services",
+      "section": "Services section hero",
+      "confidence": 0.94,
+      "reasoning": "Roll-off container options image showcases service capabilities on homepage",
+      "timestamp": "2025-10-04T18:25:24.000Z"
+    },
+    {
+      "file": "src/pages/materials.tsx",
+      "imageSrc": "/images/long_iron.jpg",
+      "altText": "Steel & Iron",
+      "section": "Steel & Iron material card",
+      "confidence": 0.96,
+      "reasoning": "Long iron image directly matches 'Steel & Iron' material type",
+      "timestamp": "2025-10-04T18:24:01.000Z"
+    },
+    {
+      "file": "src/pages/materials.tsx",
+      "imageSrc": "/images/vehicles_accepted.jpg",
+      "altText": "Vehicles",
+      "section": "Vehicles material card",
+      "confidence": 0.96,
+      "reasoning": "Vehicles accepted image directly matches 'Vehicles' material type",
+      "timestamp": "2025-10-04T18:24:01.000Z"
+    }
+  ],
+  "availableImages": [
+    "aluminum_cast.jpg",
+    "aluminum_ch_whl.jpg",
+    "aluminum_whl.jpg",
+    "aluminum.png",
+    "brass.jpg",
+    "BusinessCardsRollOff-Back.jpg",
+    "BusinessCardsRollOff-Front.jpg",
+    "compressors.jpg",
+    "Construction.jpg",
+    "copper_1.jpg",
+    "copper_2.jpg",
+    "copper.png",
+    "cu_br_rad.jpg",
+    "dealer_clips.jpg",
+    "demolition-safety.png",
+    "electric_motors.jpg",
+    "gutters.jpg",
+    "hero_background_high_res.jpg",
+    "icw_1.jpg",
+    "IMG_1674 1.HEIC",
+    "IMG_1674 1.MOV",
+    "IMG_1674.HEIC",
+    "IMG_1674.MOV",
+    "IMG_1675 1.HEIC",
+    "IMG_1675 1.MOV",
+    "IMG_1675.HEIC",
+    "isn-logo.png",
+    "logo.png",
+    "long_iron.jpg",
+    "project-planning-scrap.jpg",
+    "r2-certified-logo.png",
+    "roll-off-container-options.jpg",
+    "roll-off-container.jpg",
+    "stainlesssteel.jpg",
+    "tin.jpg",
+    "vehicle_accept_odd.jpg",
+    "vehicles_accept_large.jpg",
+    "vehicles_accepted.jpg"
+  ],
+  "pagesAnalyzed": ["src/pages/about.tsx", "src/pages/careers.tsx", "src/pages/contact.tsx", "src/pages/index.tsx", "src/pages/materials.tsx"],
+  "pendingPages": ["src/pages/locations.tsx", "src/pages/resources.tsx", "src/pages/schedule-pickup.tsx", "src/pages/services.tsx", "src/pages/sustainability.tsx"],
+  "componentsPending": ["src/components/AnimatedCounter.tsx", "src/components/ErrorBoundary.tsx", "src/components/FacebookIcon.tsx", "src/components/Footer.tsx", "src/components/Header.tsx", "src/components/Hero.tsx", "src/components/Layout.tsx", "src/components/LinkedInIcon.tsx", "src/components/LoadingSpinner.tsx", "src/components/Map.tsx", "src/components/RecyclingCalculator.tsx", "src/components/SEO.tsx", "src/components/ServiceModal.tsx", "src/components/Testimonials.tsx", "src/components/Toast.tsx", "src/components/TrustBadges.tsx"]
+}
