@@ -3,7 +3,13 @@ const withBundleAnalyzer = require("@next/bundle-analyzer")({
 });
 
 /** @type {import('next').NextConfig} */
+const isProd = process.env.NODE_ENV === "production";
+
 const nextConfig = {
+  output: isProd ? "export" : undefined,
+  basePath: isProd ? "/kl-recyclingWeb" : "",
+  assetPrefix: isProd ? "/kl-recyclingWeb/" : "",
+  trailingSlash: isProd,
   reactStrictMode: true,
   swcMinify: true, // Enable SWC minifier for faster builds
 
@@ -11,10 +17,13 @@ const nextConfig = {
   compress: true,
   poweredByHeader: false,
 
-  // Enhanced Image optimization with Cloudinary integration
+  // Enhanced Professional Image optimization with Cloudinary integration for static export
   images: {
-    deviceSizes: [320, 640, 768, 1024, 1200, 1920, 2048],
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384, 512],
+    // Disable optimization for static export compatibility
+    unoptimized: true,
+    // Optimized device sizes for multiple screen densities
+    deviceSizes: [320, 640, 768, 1024, 1200, 1920, 2048, 2560],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384, 512, 768, 1024],
     // Use remotePatterns for better security
     remotePatterns: [
       {
@@ -38,11 +47,13 @@ const nextConfig = {
         hostname: "res.cloudinary.com",
       },
     ],
-    // Enable modern image formats with priority on WebP
+    // Enable modern image formats with proper priority for professional quality
     formats: ["image/avif", "image/webp"],
-    // Additional optimization settings
+    // Professional optimization settings for static export
     dangerouslyAllowSVG: false,
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+    // Quality settings (Next.js uses these defaults, overridden by loader)
+    minimumCacheTTL: 86400, // 24 hours
   },
 
   // Optimize bundle for development speed
@@ -50,7 +61,7 @@ const nextConfig = {
     optimizeCss: true,
     scrollRestoration: true,
     // Add server components optimization
-    serverComponentsExternalPackages: [],
+    serverExternalPackages: [],
     // Improve dev performance
     workerThreads: false,
   },
