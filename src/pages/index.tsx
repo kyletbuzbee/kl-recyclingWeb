@@ -47,19 +47,11 @@ const HomePage: FC = (): JSX.Element => {
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center">
         <div className="absolute inset-0">
-          <Image
-            src="/assets/layout/hero-background.jpg"
-            alt="Industrial scrapyard with machinery"
-            fill
-            className="object-cover"
-            priority
-          />
+          <Image src="/assets/layout/hero-background.jpg" alt="Industrial scrapyard with machinery" fill className="object-cover" priority />
           <div className="absolute inset-0 bg-black bg-opacity-50"></div>
         </div>
         <div className="relative text-center text-white z-10 max-w-4xl mx-auto px-6">
-          <h1 className="text-5xl md:text-7xl font-black mb-8 leading-tight">
-            50 Years of East Texas Recycling: Maximum Value, Minimum Hassle
-          </h1>
+          <h1 className="text-5xl md:text-7xl font-black mb-8 leading-tight">50 Years of East Texas Recycling: Maximum Value, Minimum Hassle</h1>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Link href="/quote" className="bg-green-600 hover:bg-green-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
               Get Free Quote

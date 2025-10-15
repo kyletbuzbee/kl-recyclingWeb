@@ -1,14 +1,12 @@
 "use client";
 
-import React, { FC, useState } from "react";
+import React, { FC } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import TrustBuilder from "./TrustBuilder";
 
 const Hero: FC = (): JSX.Element => {
-  const [isVideoLoaded, setIsVideoLoaded] = useState(false);
-
   const headline = "50 Years of East Texas Recycling: Maximum Value, Minimum Hassle";
   const headlineWords = headline.split(" ");
 
@@ -77,15 +75,7 @@ const Hero: FC = (): JSX.Element => {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image from layout_core_values.jpg */}
       <div className="absolute inset-0 z-0">
-        <Image
-          src="/assets/layout_core_values.jpg"
-          alt="K&L Recycling core values - Honesty, Integrity, Respect, Excellence"
-          fill
-          priority
-          quality={90}
-          className="object-cover"
-          style={{ objectPosition: 'center' }}
-        />
+        <Image src="/assets/layout_core_values.jpg" alt="K&L Recycling core values - Honesty, Integrity, Respect, Excellence" fill priority quality={90} className="object-cover" style={{ objectPosition: "center" }} />
         <div className="absolute inset-0 bg-gradient-to-br from-blue-900/80 to-black/70"></div>
       </div>
 
@@ -94,16 +84,12 @@ const Hero: FC = (): JSX.Element => {
         <motion.div initial="hidden" animate="visible" variants={containerVariants}>
           {/* Main Headline - WE PAY YOU CASH */}
           <motion.div variants={wordVariants} className="mb-8">
-            <h1 className="text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-black leading-tight mb-4 text-shadow-heavy text-white">
-              WE PAY YOU CASH!
-            </h1>
+            <h1 className="text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-black leading-tight mb-4 text-shadow-heavy text-white">WE PAY YOU CASH!</h1>
           </motion.div>
 
           {/* 50 Years Experience Badge */}
           <motion.div variants={textVariants} className="mb-8">
-            <div className="inline-block bg-gradient-to-r from-yellow-400 to-orange-500 text-black font-black text-2xl md:text-3xl px-8 py-4 rounded-full shadow-2xl">
-              50 YEARS OF EXPERIENCE
-            </div>
+            <div className="inline-block bg-gradient-to-r from-yellow-400 to-orange-500 text-black font-black text-2xl md:text-3xl px-8 py-4 rounded-full shadow-2xl">50 YEARS OF EXPERIENCE</div>
           </motion.div>
 
           {/* Core Values */}
@@ -113,15 +99,9 @@ const Hero: FC = (): JSX.Element => {
                 { name: "HONESTY", color: "from-green-500 to-emerald-600" },
                 { name: "INTEGRITY", color: "from-blue-500 to-cyan-600" },
                 { name: "RESPECT", color: "from-purple-500 to-indigo-600" },
-                { name: "EXCELLENCE", color: "from-red-500 to-pink-600" }
+                { name: "EXCELLENCE", color: "from-red-500 to-pink-600" },
               ].map((value, index) => (
-                <motion.div
-                  key={value.name}
-                  initial={{ scale: 0, rotate: -10 }}
-                  animate={{ scale: 1, rotate: 0 }}
-                  transition={{ delay: 2 + index * 0.1, type: "spring", stiffness: 200 }}
-                  className={`bg-gradient-to-r ${value.color} text-white px-6 py-3 rounded-xl font-bold text-lg shadow-lg transform hover:scale-105 transition-transform`}
-                >
+                <motion.div key={value.name} initial={{ scale: 0, rotate: -10 }} animate={{ scale: 1, rotate: 0 }} transition={{ delay: 2 + index * 0.1, type: "spring", stiffness: 200 }} className={`bg-gradient-to-r ${value.color} text-white px-6 py-3 rounded-xl font-bold text-lg shadow-lg transform hover:scale-105 transition-transform`}>
                   {value.name}
                 </motion.div>
               ))}

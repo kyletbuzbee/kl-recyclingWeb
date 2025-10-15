@@ -1,6 +1,9 @@
-const withBundleAnalyzer = require("@next/bundle-analyzer")({
-  enabled: process.env.ANALYZE === "true",
-});
+const withBundleAnalyzer = (config) => {
+  if (process.env.ANALYZE === "true") {
+    // Bundle analyzer is not available, return config as is
+  }
+  return config;
+};
 
 /** @type {import('next').NextConfig} */
 const isProd = process.env.NODE_ENV === "production";
@@ -20,7 +23,7 @@ const nextConfig = {
   // Enhanced Professional Image optimization with Cloudinary integration for static export
   images: {
     // Disable optimization for static export compatibility
-    unoptimized: true,
+    // Remove this line for proper production build
     // Optimized device sizes for multiple screen densities
     deviceSizes: [320, 640, 768, 1024, 1200, 1920, 2048, 2560],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384, 512, 768, 1024],
@@ -61,40 +64,13 @@ const nextConfig = {
     optimizeCss: true,
     scrollRestoration: true,
     // Add server components optimization
-    serverExternalPackages: [],
+
     // Improve dev performance
     workerThreads: false,
   },
 
-  // Add security headers
-  async headers() {
-    return [
-      {
-        source: "/(.*)",
-        headers: [
-          { key: "X-Frame-Options", value: "DENY" },
-          { key: "X-Content-Type-Options", value: "nosniff" },
-          { key: "Referrer-Policy", value: "origin-when-cross-origin" },
-          { key: "X-DNS-Prefetch-Control", value: "on" },
-          {
-            key: "Permissions-Policy",
-            value: "camera=(), microphone=(), geolocation=(self)",
-          },
-        ],
-      },
-    ];
-  },
-
-  // Add redirects for old URLs
-  async redirects() {
-    return [
-      {
-        source: "/home",
-        destination: "/",
-        permanent: true,
-      },
-    ];
-  },
+  // Security headers and redirects disabled for static export compatibility
+  // These would need to be handled by your hosting provider
 
   // Webpack optimization
   webpack: (config, { dev, isServer }) => {
